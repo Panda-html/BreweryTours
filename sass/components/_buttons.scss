@@ -25,10 +25,11 @@
     }
   }
   &-book {
-    background: linear-gradient(125.89deg, #95BB54 0%, #AEE057 100%);
+    background: #95BB54;
     border-radius: 100px;
+    @include transition(.3);
     &:hover {
-      background-position: left center;
+      background: #6D9E18;
     }
   }
   &-squared {

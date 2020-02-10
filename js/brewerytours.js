@@ -1,6 +1,8 @@
 let front = {
   hamburger: $('.hamburger'),
   nav: $('.navbar'),
+  primaryNav: $('.primary-navigation'),
+  cart: $('.header-cart'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -33,9 +35,13 @@ let front = {
       if (!this.hamburger.hasClass('open')) {
           this.hamburger.addClass('open');
           this.nav.toggleClass('active');
+          this.primaryNav.toggleClass('active')
+          this.cart.toggleClass('active')
       } else {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
+          this.primaryNav.toggleClass('active')
+          this.cart.toggleClass('active')
       }
   },
   navMouseOver: function () {
@@ -249,3 +255,10 @@ $(function(){
 });
 
 
+// $('#theDivThatHoldsTheImage_YouCouldMakeItMoreSemanticIfYouWish').hover(
+//     function() {
+//         $('#btn').fadeIn('slow');
+//     },function() {
+//         $('#btn').fadeOut('slow');
+//     }
+// );

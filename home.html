@@ -20,9 +20,9 @@
       <a href="" class="header-logo">
         <img src="./img/logo.svg" alt="">
       </a>
-      <nav class="navbar">
+      <nav class="primary-navigation active">
         <div class="menu-primary__container">
-          <ul class="primary-menu">
+          <ul class="primary-menu active">
             <li class="menu-item">
               <a href="#" class="menu-item__link">Public tours</a>
             </li>
@@ -36,47 +36,103 @@
         </div>
       </nav>
       <div class="header-menu d-flex align-middle">
-        <div class="header-cart">
+        <div class="header-cart active">
           <i class="icon-cart"></i>
           <span class="header-cart__counter">
             4
           </span>
         </div>
-        <div class="hamburger d-flex align-middle">
-          MENU
+        <div class="hamburger open d-flex align-middle">
+          <p>MENU</p>
+          <p>CLOSE MENU</p>
           <span></span>
           <span></span>
           <span></span>
-          <!-- <span></span> -->
         </div>
+        <div class="navbar active">
+          <div class="navbar-main">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <ul class="primary-menu flex-column">
+                    <li class="menu-item active">
+                      <a href="#" class="menu-item__link">Public Tours</a>
+                      <img src="./img/nav-image.jpg" alt="">
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-item__link">Private Touring</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-item__link">Gift Cards & Merchandise</a>
+                    </li>
+                    <li class="menu-item menu-item-has-child">
+                      <a href="#" class="menu-item__link">Our Partners</a>
+                      <ul class="sub-menu">
+                        <li class="menu-item">
+                          <a href="#" class="menu-item__link">
+                            <img src="./img/submenu-image.jpg" alt="">
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="col-md-6">
+                  
+                </div> -->
+              </div>
+            </div>
 
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
 </header>
 <section class="main-screen">
-  <div class="container">
-    <div class="row d-flex align-center">
-      <div class="col-md-10">
-        <h1 class="main-screen__title heading-1 --bold text-center">
-          We are <br>
-          Craft Beer  <br>
-          Spirits & Cocktails <br>
-          Cider <br>
-          Food  <br>
-          and a splash of wine <br>
-        </h1>
+  <div class="container full-height">
+    <div class="row d-flex align-center full-height">
+      <div class="col-md-10 d-flex align-center align-middle">
+        <div class="main-screen__title d-flex flex-column align-middle">
+          <h1 class="heading-1 --bold text-center">
+            We are <br>
+            Craft Beer <br>
+            Spirits & Cocktails <br>
+            Cider <br>
+            Food <br>
+            and a splash of wine <br>
+          </h1>
+          <a href="#" class="btn btn-book">VIEW TOURS</a>
+        </div>
+      </div>
+      <div class="col-md-11 d-flex align-right">
+        <div class="main-screen__rewards d-flex">
+          <div class="rewards__item default-icon">
+            <img src="./img/reward.png" alt="">
+          </div>
+          <div class="rewards__item default-icon">
+            <img src="./img/reward.png" alt="">
+          </div>
+          <div class="rewards__item default-icon">
+            <img src="./img/reward.png" alt="">
+          </div>
+          <div class="rewards__item default-icon">
+            <img src="./img/reward.png" alt="">
+          </div>
+        </div>
+
       </div>
     </div>
-
 
 
     <div class="main-screen__image default-icon">
       <img src="./img/main-screen-image.jpg" alt="">
     </div>
-    
+
   </div>
 </section>
+
 <body>
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>

@@ -2,9 +2,21 @@
 @import "../abstracts/variables";
 
 .main-screen {
-  padding-top: 60px;
+  height: calc(100vh - 80px);
   &__title {
     color: $whiteColor;
+    & h1 {
+      margin-bottom: 30px;
+    }
+  }
+  &__rewards {
+    position: absolute;
+    bottom: 40px;
+    & .rewards__item {
+      width: 64px;
+      height: 64px;
+      margin-right: 12px;
+    }
   }
   &__image {
     position: absolute;
