@@ -255,10 +255,10 @@ $(function(){
 });
 
 
-// $('#theDivThatHoldsTheImage_YouCouldMakeItMoreSemanticIfYouWish').hover(
-//     function() {
-//         $('#btn').fadeIn('slow');
-//     },function() {
-//         $('#btn').fadeOut('slow');
-//     }
-// );
+$('.menu-item-has-child').hover(
+    function() {
+        $('.submenu').fadeIn('fast');
+    },function() {
+        $('.submenu').fadeOut('fast');
+    }
+);
