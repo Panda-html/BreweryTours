@@ -1,9 +1,6 @@
 let front = {
-
   hamburger: $('.hamburger'),
   nav: $('.navbar'),
-  filterGridBtn: $('.filter-grid__btn'),
-  header_drop: $('.header-drop'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,

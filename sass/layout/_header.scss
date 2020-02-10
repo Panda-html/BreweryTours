@@ -7,6 +7,8 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 999;
+  background: $whiteColor;
   &-menu {
     margin-right: 30px;
   }
@@ -27,33 +29,81 @@
       right: -10px;
     }
   }
-  &-hamburger {
-    cursor: pointer;
-    position: relative;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 23px;
-    & span {
-      left: 55px;
-      background: $blackColor;
-      height: 2px;
-      border-radius: 100px;
-      position: absolute;
+}
+
+// Header Menu!
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+  & span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background: $blackColor;
+    border-radius: 100px;
+    opacity: 1;
+    left: 55px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      width: 24px;
+      top: 5px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
       width: 17px;
-      display: block;
-      &:nth-child(2) {
-        top: 5px;
-        width: 24px;
-      }
-      &:nth-child(3) {
-        bottom: 5px;
-        width: 21px;
-      }
+      top: 10px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+    }
+    &:nth-child(3) {
+      width: 21px;
+      top: 15px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+    }
+  }
+  &.open {
+    span:nth-child(1){
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      width: 20px;
+      top: 3px;
+    }    
+    span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      width: 20px;
+      top: 17px;
     }
   }
 }
 
-// Header Menu!
 .primary-menu {
   display: flex;
   & .menu-item {

@@ -4,7 +4,6 @@
 .sitemap {
   &__heading {
     margin: 36px 0 24px 0;
-
   }
   &__item {
     margin-bottom: 24px;
@@ -16,7 +15,7 @@
     &--description {
       @include fontSize(14, 16);
       line-height: 1.375;
-      color: #A1A1A1;
+      color: #888888;
       margin-bottom: 8px;
     }
     &--link {
@@ -25,7 +24,7 @@
         color: $greenColor;
         @include fontSize(14, 16);
         line-height: 1.375;
-        font-weight: 600;
+        font-weight: 700;
         position: relative;
         &:before {
           content: '';

@@ -48,14 +48,14 @@
   }
 }
 
-.p-0 {
-  padding: 0 !important;
-  @media (max-width: $breakpoint-sm) {
-    padding: 0 15px !important;
-  }
-}
+// .p-0 {
+//   padding: 0 !important;
+//   @media (max-width: $breakpoint-sm) {
+//     padding: 0 15px !important;
+//   }
+// }
 
-.p-zero {
+.p-0 {
   padding: 0 !important;
 }
 
