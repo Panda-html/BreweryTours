@@ -1,6 +1,48 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-// .sitemap {
-//   height: 200vh;
-// }
+.sitemap {
+  &__heading {
+    margin: 36px 0 24px 0;
+
+  }
+  &__item {
+    margin-bottom: 24px;
+    &--title {
+      @include fontSize(16, 24);
+      line-height: 1.375;
+      margin-bottom: 8px;
+    }
+    &--description {
+      @include fontSize(14, 16);
+      line-height: 1.375;
+      color: #A1A1A1;
+      margin-bottom: 8px;
+    }
+    &--link {
+      margin: 0 24px 12px 0;
+      & a {
+        color: $greenColor;
+        @include fontSize(14, 16);
+        line-height: 1.375;
+        font-weight: 600;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          height: 1px;
+          width: 0;
+          background: $greenColor;
+          bottom: 0;
+          @include transition(.3);
+        }
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

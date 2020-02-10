@@ -51,17 +51,17 @@
 
 .heading-2 {
   @include fontSize(28, 48);
-  line-height: 0.73;
+  line-height: 1.375;
 }
 
 .heading-3 {
   @include fontSize(18, 36);
-  line-height: 0.73;
+  line-height: 1.375;
 }
 
 .heading-4 {
   @include fontSize(16, 24);
-  line-height: 0.72;
+  line-height: 1.375;
 }
 
 .heading-5 {
