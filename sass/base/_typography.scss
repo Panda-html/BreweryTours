@@ -1,0 +1,191 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.--regular {
+  font-weight: 400;
+}
+
+.--medium {
+  font-weight: 500;
+}
+
+.--semibold {
+  font-weight: 600;
+}
+
+.--bold {
+  font-weight: 700;
+}
+.--extra{
+  font-weight: 800;
+}
+
+.--uppercase {
+  text-transform: uppercase;
+}
+
+// h1, h2 {
+//   font-family: 'Antqua', sans-serif;
+// }
+
+// h3, h4, h5, h6 {
+//   font-family: 'Lato', sans-serif;
+// }
+
+.heading-1 {
+  @include fontSize(32, 58);
+  line-height: 0.76;
+}
+
+.heading-2 {
+  @include fontSize(28, 48);
+  line-height: 0.73;
+}
+
+.heading-3 {
+  @include fontSize(18, 36);
+  line-height: 0.73;
+}
+
+.heading-4 {
+  @include fontSize(16, 24);
+  line-height: 0.72;
+}
+
+.heading-5 {
+  @include fontSize(14, 18);
+  line-height: 1.64;
+}
+
+.heading-6 {
+  @include fontSize(12, 16);
+  line-height: 1.6;
+}
+
+.icon-arrow-circle .path1:before {
+  content: "\e900";
+  color: rgb(255, 255, 255);
+}
+.icon-arrow-circle .path2:before {
+  content: "\e901";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-icon-arrow:before {
+  content: "\e902";
+}
+.icon-icon-bus:before {
+  content: "\e903";
+  color: #95bb54;
+}
+.icon-icon-chat:before {
+  content: "\e904";
+  color: #95bb54;
+}
+.icon-icon-close-1:before {
+  content: "\e905";
+  color: #95bb54;
+}
+.icon-icon-close:before {
+  content: "\e906";
+}
+.icon-icon-facebook-circle .path1:before {
+  content: "\e907";
+  color: rgb(255, 255, 255);
+}
+.icon-icon-facebook-circle .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(58, 85, 159);
+}
+.icon-icon-facebook:before {
+  content: "\e909";
+  color: #4267b2;
+}
+.icon-icon-google:before {
+  content: "\e90a";
+  color: #d02c1f;
+}
+.icon-icon-instagram-circle .path1:before {
+  content: "\e90b";
+  color: rgb(255, 255, 255);
+}
+.icon-icon-instagram-circle .path2:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-icon-instagram-circle .path3:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-icon-instagram-circle .path4:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-icon-instagram:before {
+  content: "\e90f";
+}
+.icon-icon-new-south-wales:before {
+  content: "\e910";
+  color: #cedd79;
+}
+.icon-icon-phone:before {
+  content: "\e911";
+  color: #95bb54;
+}
+.icon-icon-placeholder:before {
+  content: "\e912";
+  color: #95bb54;
+}
+.icon-icon-quensland:before {
+  content: "\e913";
+  color: #b4afcd;
+}
+.icon-icon-south-australia:before {
+  content: "\e914";
+  color: #dfbccd;
+}
+.icon-icon-tasmania:before {
+  content: "\e915";
+  color: #dfbccd;
+}
+.icon-icon-tripadvisor:before {
+  content: "\e916";
+  color: #00a680;
+}
+.icon-icon-twitter-circle .path1:before {
+  content: "\e917";
+  color: rgb(255, 255, 255);
+}
+.icon-icon-twitter-circle .path2:before {
+  content: "\e918";
+  margin-left: -1em;
+  color: rgb(3, 169, 244);
+}
+.icon-icon-victoria-1:before {
+  content: "\e919";
+  color: #fff79d;
+}
+.icon-icon-victoria:before {
+  content: "\e91a";
+  color: #fff79d;
+}
+.icon-icon-western-australia:before {
+  content: "\e91b";
+  color: #e9ca8b;
+}

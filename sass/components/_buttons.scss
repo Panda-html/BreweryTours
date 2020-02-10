@@ -1,0 +1,41 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: $whiteColor;
+  padding: 8px 52px;
+  font-weight: 700;
+  display: inline-block;
+  @include fontSize(16, 18);
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  @include transition(0.3);
+  &-rounded {
+    background: $greenColor;
+    border-radius: 100px;
+    &:hover {
+      background: $greenHoverColor;
+    }
+  }
+  &-book {
+    background: linear-gradient(125.89deg, #95BB54 0%, #AEE057 100%);
+    border-radius: 100px;
+    &:hover {
+      background-position: left center;
+    }
+  }
+  &-squared {
+    background: $greenColor;
+    border-radius: 5px;
+    &:hover {
+      background: $greenHoverColor;
+    }
+  }
+}
