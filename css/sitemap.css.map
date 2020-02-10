@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/pages/sitemap.scss",
+        "../sass/abstracts/_mixins.scss",
+        "../sass/abstracts/_variables.scss"
+    ],
+    "names": [],
+    "file": "sitemap.css"
+}

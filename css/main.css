@@ -137,7 +137,7 @@ img {
 }
 
 .body-padding {
-  height: 137px;
+  height: 80px;
 }
 
 @media (max-width: 991px) {
@@ -331,7 +331,7 @@ table {
   font-size: -webkit-calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
   font-size: -moz-calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
   font-size: calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 0.76;
+  line-height: 1.35;
 }
 
 .heading-2 {
@@ -372,6 +372,10 @@ table {
   font-size: -moz-calc(12px + (16 - 12) * ((100vw - 300px) / (1900 - 300)));
   font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1900 - 300)));
   line-height: 1.6;
+}
+
+.icon-cart:before {
+  content: "\e91c";
 }
 
 .icon-arrow-circle .path1:before {
@@ -1519,6 +1523,79 @@ table {
     flex: 0 0 100.0%;
     max-width: 100.0%;
   }
+}
+
+.header {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-menu {
+  margin-right: 30px;
+}
+
+.header-cart {
+  position: relative;
+  margin-right: 35px;
+}
+
+.header-cart__counter {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+  background: #95BB54;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  bottom: -4px;
+  right: -10px;
+}
+
+.header-hamburger {
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.header-hamburger span {
+  left: 55px;
+  background: #000000;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  width: 17px;
+  display: block;
+}
+
+.header-hamburger span:nth-child(2) {
+  top: 5px;
+  width: 24px;
+}
+
+.header-hamburger span:nth-child(3) {
+  bottom: 5px;
+  width: 21px;
+}
+
+.primary-menu {
+  display: flex;
+}
+
+.primary-menu .menu-item__link {
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  font-size: -webkit-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.375;
 }
 
 .flickity-enabled {
