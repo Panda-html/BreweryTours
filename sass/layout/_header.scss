@@ -151,7 +151,7 @@
   height: calc(100vh - 80px);
   width: 100vw;
   overflow-y: auto;
-  @include transition(.3);
+  @include transition(.5);
   &.active {
     left: 0;
   }
