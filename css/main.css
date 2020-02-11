@@ -1763,7 +1763,7 @@ table {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 20px;
-  top: 10px;
+  top: 9px;
 }
 
 .hamburger.open span:nth-child(4) {
@@ -1777,7 +1777,7 @@ table {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   width: 20px;
-  top: 10px;
+  top: 9px;
 }
 
 .primary-navigation.active {
