@@ -2,6 +2,7 @@
 @import "../abstracts/variables";
 
 .main-screen {
+  // height: 200vh;
   height: calc(100vh - 80px);
   &__title {
     color: $whiteColor;

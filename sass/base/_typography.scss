@@ -73,6 +73,10 @@
   @include fontSize(12, 16);
   line-height: 1.6;
 }
+.icon-question-1:before {
+  content: "\e91e";
+  color: #fff;
+}
 
 .icon-icon-envelope:before {
   content: "\e91d";
@@ -95,7 +99,15 @@
 }
 .icon-icon-bus:before {
   content: "\e903";
-  color: #95bb54;
+  width: 48px;
+  height: 48px;
+  background: #54B5BB;
+  border-radius: 100px;
+  color: $whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 .icon-icon-chat:before {
   content: "\e904";
@@ -153,11 +165,27 @@
 }
 .icon-icon-phone:before {
   content: "\e911";
-  color: #95bb54;
+  background: #D5BF4F;
+  width: 48px;
+  height: 48px;
+  border-radius: 100px;
+  color: $whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 .icon-icon-placeholder:before {
   content: "\e912";
-  color: #95bb54;
+  width: 48px;
+  height: 48px;
+  background: #D4A7E9;
+  border-radius: 100px;
+  color: $whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
 }
 .icon-icon-quensland:before {
   content: "\e913";

@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (let i = 0; i < childrenItem.length; i++) {
         var btn = document.createElement("BUTTON");   // Create a <button> element
         btn.className = "nav-btn";                    // add class
-        btn.innerHTML = `<i class="icon-arrow-bottom"></i>`;
+        btn.innerHTML = `<i class="icon-icon-arrow"></i>`;
         childrenItem[i].appendChild(btn);
     }
 });
@@ -268,14 +268,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(document).on('click', '.nav-btn', function (e) {
     e.preventDefault();
     var navTitle = document.createElement("p");
-
     navTitle.className = "nav-title";        
-    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>' + $(this).parent().text();
-    $(this).parent().next('.submenu').prepend(navTitle);
-    if (!$(this).parent().parent().next('.submenu').hasClass('menuOpen')) {
-        $(this).parent().parent().next('.submenu').addClass('menuOpen');
+    navTitle.innerHTML = '<i class="icon-icon-arrow"></i>' + $(this).parent().text();
+    $(this).parent().parent().find('.submenu').prepend(navTitle);
+    if (!$(this).parent().parent().find('.submenu').hasClass('menuOpen')) {
+        $(this).parent().parent().find('.submenu').addClass('menuOpen');
     } else {
-        $(this).parent().parent().next('.submenu').removeClass("menuOpen");
+        $(this).parent().parent().find('.submenu').removeClass("menuOpen");
     }
 });
 
@@ -287,7 +286,7 @@ $(document).on('click', '.nav-title', function (e) {
     }
 });
 
-if (window.matchMedia("(max-width: 992)").matches) {
+if (window.matchMedia("(min-width: 992px)").matches) {
     $('.menu-item-has-children').hover(
         function() {
             $('.submenu').fadeIn('fast');
