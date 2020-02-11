@@ -12,6 +12,15 @@
   &__rewards {
     position: absolute;
     bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      position: static;
+    }
+    &--container {
+      justify-content: flex-end;
+      @media (max-width: $breakpoint-lg) {
+        justify-content: center;
+      }
+    }
     & .rewards__item {
       width: 64px;
       height: 64px;

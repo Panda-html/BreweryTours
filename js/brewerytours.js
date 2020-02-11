@@ -254,11 +254,47 @@ $(function(){
   $("#footer").load("footer.html");
 });
 
+document.addEventListener("DOMContentLoaded", function (event) {
 
-$('.menu-item-has-child').hover(
-    function() {
-        $('.submenu').fadeIn('fast');
-    },function() {
-        $('.submenu').fadeOut('fast');
+    let childrenItem = document.querySelectorAll('.menu-item-has-children > a');
+    for (let i = 0; i < childrenItem.length; i++) {
+        var btn = document.createElement("BUTTON");   // Create a <button> element
+        btn.className = "nav-btn";                    // add class
+        btn.innerHTML = `<i class="icon-arrow-bottom"></i>`;
+        childrenItem[i].appendChild(btn);
     }
-);
+});
+
+$(document).on('click', '.nav-btn', function (e) {
+    e.preventDefault();
+    var navTitle = document.createElement("p");
+
+    navTitle.className = "nav-title";        
+    navTitle.innerHTML = '<i class="icon-cheveron-left"></i>' + $(this).parent().text();
+    $(this).parent().next('.submenu').prepend(navTitle);
+    if (!$(this).parent().parent().next('.submenu').hasClass('menuOpen')) {
+        $(this).parent().parent().next('.submenu').addClass('menuOpen');
+    } else {
+        $(this).parent().parent().next('.submenu').removeClass("menuOpen");
+    }
+});
+
+$(document).on('click', '.nav-title', function (e) {
+    e.preventDefault();
+    if ($(this).parent().hasClass('menuOpen')) {
+        $(this).parent().removeClass("menuOpen");
+        $(this).remove();
+    }
+});
+
+if (window.matchMedia("(max-width: 992)").matches) {
+    $('.menu-item-has-children').hover(
+        function() {
+            $('.submenu').fadeIn('fast');
+        },function() {
+            $('.submenu').fadeOut('fast');
+        }
+    );
+  } else {
+    console.log('test');
+  }

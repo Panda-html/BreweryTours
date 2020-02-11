@@ -74,6 +74,10 @@
   line-height: 1.6;
 }
 
+.icon-icon-envelope:before {
+  content: "\e91d";
+  color: #95bb54;
+}
 .icon-cart:before {
   content: "\e91c";
 }

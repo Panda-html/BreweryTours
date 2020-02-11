@@ -9,10 +9,9 @@
   width: 100%;
   z-index: 999;
   background: $whiteColor;
-  &-menu {
-    margin-right: 30px;
-    // position: relative;
-  }
+  // &-menu {
+  //   margin-right: 30px;
+  // }
   &-cart {
     position: relative;
     margin-right: 35px;
@@ -103,7 +102,7 @@
       -o-transform: rotate(45deg);
       transform: rotate(45deg);
       width: 20px;
-      top: 3px;
+      top: 2px;
     }    
     span:nth-child(4) {
       width: 0%;
@@ -115,12 +114,15 @@
       -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
       width: 20px;
-      top: 17px;
+      top: 16px;
     }
   }
 }
 .primary-navigation {
   &.active {
+    display: none;
+  }
+  @media (max-width: $breakpoint-lg) {
     display: none;
   }
 }
@@ -129,7 +131,7 @@
   display: flex;
   & .menu-item {
     &__link {
-      padding: 10px 18px;
+      padding: 10px 18px 10px 0;
       font-weight: 600;
       @include fontSize(14, 16);
       line-height: 1.375;
@@ -148,6 +150,7 @@
   background: $whiteColor;
   height: calc(100vh - 80px);
   width: 100vw;
+  overflow-y: auto;
   @include transition(.3);
   &.active {
     left: 0;
@@ -161,11 +164,21 @@
     & img {
       object-fit: cover;
     }
+    @media (max-width: $breakpoint-lg) {
+      // width: 40%;
+      display: none;
+    }
   }
   & .primary-menu {
     margin-top: 70px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 45px;
+    }
     & .menu-item {
       margin-bottom: 30px;
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 18px;
+      }
       & > img {
         position: absolute;
         top: 0;
@@ -176,12 +189,14 @@
         opacity: 0;
         visibility: hidden;
         @include transition(.3);
+        @media (max-width: $breakpoint-lg) {
+          display: none;
+        }
       }
       & .submenu {
         display: none;
         margin-top: -47px;
         margin-left: 270px;
-        // transition-delay: 2s;
         &-item {
           display: inline-block;
         }
@@ -215,10 +230,15 @@
           &:before {
             width: 40px;
           }
+          @media (max-width: $breakpoint-lg) {
+            padding-left: 40px;
+            &:before {
+              width: 28px;
+            }
+          }
         }
         & .submenu {
           &-item {
-            // display: inline-block;
             &__link {
               display: block;
             }
@@ -241,5 +261,64 @@
       }
     }
   }
+  &-bottom {
+    position: absolute;
+    bottom: 60px;
+    @media (max-width: $breakpoint-lg) {
+      position: static;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  &-contacts, &-footer {
+    &__item {
+      display: flex;
+      align-items: center;
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 18px;
+      }
+      a {
+        font-size: 16px;
+        line-height: 26px;
+        padding-left: 5px;
+        @include transition(.3);
+        &:hover {
+          color: $greenColor;
+        }
+      }
+    }
+  }
+  &-footer {
+    padding-top: 40px;
+    @media (max-width: $breakpoint-lg) {
+      padding-top: 0;
+      flex-direction: column;
+    }
+    &__item {
+      a {
+        padding: 0;
+        margin-right: 28px;
+      }
+    }
+  }
 }
 
+
+.nav-btn {
+  right: -30px;
+  position: absolute;
+  top: calc(50% - 10px);
+  background: transparent;
+  border: none;
+  outline: none;
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+  &:before {
+    font-family: 'icomoon';
+    content: "\e902";
+    display: block;
+    transform: rotate(-90deg);
+    font-size: 20px;
+  }
+}
