@@ -490,6 +490,11 @@ table {
   font-size: 24px;
 }
 
+.icon-icon-phone-navbar:before {
+  content: "\e911";
+  color: #95bb54;
+}
+
 .icon-icon-placeholder:before {
   content: "\e912";
   width: 48px;
