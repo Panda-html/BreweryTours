@@ -101,6 +101,17 @@ section.section {
   }
 }
 
+.tabcontent {
+  display: none;
+  &:first-child {
+    display: block;
+  }
+}
+// .home-tabs {
+//   width: 100%;
+//   height: 100%;
+// }
+
 .app-section-3 {
   & .home-images {
     position: absolute;
@@ -118,25 +129,31 @@ section.section {
       position: relative;
       width: 13vw;
       cursor: pointer;
-      // &:before {
-      //   content: '';
-      //   background: rgba(0, 0, 0, 0.4);
-      //   opacity: 0;
-      //   position: absolute;
-      //   left: 0;
-      //   top: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   @include transition(.3);
-      // }
-      &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &.active {
         & img {
-          filter: saturate(100%);
-          filter: grayscale(50%);
+          filter: unset;
         }
         &:before {
           opacity: 1;
         }
+      }
+      &:hover {
+        // & img {
+        //   filter: unset;
+        // }
+        // &:before {
+        //   opacity: 1;
+        // }
       }
       &__text {
         position: absolute;
@@ -153,11 +170,11 @@ section.section {
         align-items: center;
         justify-content: center;
         pointer-events: none;
+        text-align: center;
       }
       & img {
         object-fit: cover;
         filter: saturate(0%);
-        @include transition(.3);
       }
       &:nth-child(even) {
         top: 10vh;
@@ -166,12 +183,3 @@ section.section {
   }
 }
 
-
-
-// .app-section-2 {
-//   background: #eee;
-// }
-
-// .app-section-3 {
-//   background: #333;
-// }
