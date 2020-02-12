@@ -2720,6 +2720,23 @@ html.fp-enabled,
   top: 10vh;
 }
 
+.app-section-4 .home-images {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-section-4 .home-images .image-item {
+  width: 420px;
+  height: 420px;
+}
+
+.app-section-4 .home-images .image-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .sitemap__heading {
   margin: 36px 0 24px 0;
 }
