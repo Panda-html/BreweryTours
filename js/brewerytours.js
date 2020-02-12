@@ -15,6 +15,19 @@ let front = {
   init: function () {
       this.events();
       this.headerScroll();
+      if (window.matchMedia("(min-width: 992px)").matches) {
+        new fullpage('#fullpage', {
+            licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
+            // responsiveHeight: 992,
+            anchors: ['app-section-1', 'app-section-2', 'app-section-3', 'app-section-4',
+                'app-section-5'],
+            paddingTop: '80px',
+            slidesNavigation: false,
+            slidesToSections: true
+        });
+      } else {
+        null
+      }
   },
 
   newSlider: function (selector, options) {
@@ -295,5 +308,9 @@ if (window.matchMedia("(min-width: 992px)").matches) {
         }
     );
   } else {
-    console.log('test');
+    null
   }
+
+//   $(document).ready(function() {
+// 	$('#pagepiling').pagepiling();
+// });

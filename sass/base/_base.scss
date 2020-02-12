@@ -60,14 +60,18 @@ img {
 
   &-screen {
     &__title {
+      @include fontSize(28, 48);
+      line-height: 1.375;
       margin: 0 0 16px 0;
-      // color: $defaultTextColor;
+      font-weight: bold;
       @media (max-width: $breakpoint-md) {
         margin: 0 0 12px 0;
       }
     }
     &__description {
-      margin-bottom: 16px;
+      @include fontSize(14, 18);
+      line-height: 1.64;
+      margin-bottom: 24px;
     }
   }
 }

@@ -1,9 +1,22 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+
+section.section {
+  // padding-top: 80px;
+  // margin-top: 40px;
+  // top: 80px;
+  // @media (max-width: $breakpoint-lg)
+}
+
 .main-screen {
+  // padding-top: 80px;
   // height: 200vh;
-  height: calc(100vh - 80px);
+  // margin-top: 80px;
+  // height: calc(100vh - 80px);
+  @media (max-width: $breakpoint-lg) {
+    // height: calc(100vh - 80px);
+  }
   &__title {
     color: $whiteColor;
     & h1 {
@@ -12,7 +25,8 @@
   }
   &__rewards {
     position: absolute;
-    bottom: 40px;
+    bottom: 35px;
+    right: 120px;
     @media (max-width: $breakpoint-lg) {
       position: static;
     }
@@ -35,6 +49,9 @@
     top: 80px;
     height: calc(100vh - 80px);
     z-index: -1;
+    @media (max-width: $breakpoint-lg) {
+      top: 80px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -49,3 +66,70 @@
     }
   }
 }
+
+.app-section-2 {
+  .home-images {
+    position: absolute;
+    right: 0;
+    top: 0;
+    & .image-item {
+      position: absolute;
+      & img {
+        object-fit: cover;
+      }
+      &:nth-child(1) {
+        width: 15vw;
+        right: 20vw;
+        top: 3vh;
+      }
+      &:nth-child(2) {
+        top: 9vh;
+        right: 0;
+        width: 20vw;
+      }
+      &:nth-child(3) {
+        width: 19vw;
+        right: 20vw;
+        top: 42vh;
+      }
+      &:nth-child(4) {
+        width: 20vw;
+        top: 49vh;
+        right: 0;
+      }
+    }
+  }
+}
+
+.app-section-3 {
+  & .home-images {
+    position: absolute;
+    left: 0;
+    top: 0;
+    & .image-item {
+      position: absolute;
+      width: 15vw;
+      & img {
+        object-fit: cover;
+      }
+      &:nth-child(odd) {
+        left: 0;
+        top: 10vh;
+      }
+      &:nth-child(even) {
+        top: 15vh;
+        left: 15vw;
+      }
+    }
+  }
+}
+
+
+
+// .app-section-2 {
+//   background: #eee;
+// }
+
+// .app-section-3 {
+//   background: #333;
+// }
