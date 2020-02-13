@@ -2720,14 +2720,41 @@ html.fp-enabled,
   top: 10vh;
 }
 
+.container-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .app-section-4 .home-images {
   display: flex;
   justify-content: space-between;
 }
 
 .app-section-4 .home-images .image-item {
-  width: 420px;
-  height: 420px;
+  width: 28vw;
+  height: 51vh;
+  position: relative;
+  filter: saturate(0%);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.app-section-4 .home-images .image-item:nth-child(1) {
+  border-radius: 0px 10px 0px 0px;
+}
+
+.app-section-4 .home-images .image-item:nth-child(2) {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.app-section-4 .home-images .image-item:nth-child(3) {
+  border-radius: 10px 0px 0px 0px;
 }
 
 .app-section-4 .home-images .image-item img {
@@ -2735,6 +2762,66 @@ html.fp-enabled,
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.app-section-4 .home-images .image-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.app-section-4 .home-images .image-item:hover {
+  filter: unset;
+}
+
+.app-section-4 .home-images .image-item:hover:before {
+  opacity: 1;
+}
+
+.app-section-4 .home-images .image-text {
+  font-weight: bold;
+  font-size: 48px;
+  font-size: -webkit-calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(28px + (48 - 28) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.375;
+  color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-section-5 .image-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 40vw;
+}
+
+.app-section-5 .image-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-section-5 .col-md-6 {
+  padding-left: 40px;
 }
 
 .sitemap__heading {
