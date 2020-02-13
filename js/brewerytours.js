@@ -3,6 +3,7 @@ let front = {
   nav: $('.navbar'),
   primaryNav: $('.primary-navigation'),
   cart: $('.header-cart'),
+  fixedButton: $('.wrapper-more'),  
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -56,6 +57,13 @@ let front = {
           this.nav.toggleClass('active');
           this.primaryNav.toggleClass('active')
           this.cart.toggleClass('active')
+      }
+  },
+  toggleBtn: function() {
+      if(!this.fixedButton.hasClass('active')) {
+          this.fixedButton.addClass('active');
+      } else {
+          this.fixedButton.removeClass('active');
       }
   },
   navMouseOver: function () {
@@ -121,6 +129,9 @@ let front = {
 
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
+      });
+      $(document).on('click', '.wrapper-more', function () {
+          self.toggleBtn();
       });
 
       $(document).on('click', '.coupon-btn', function () {

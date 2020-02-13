@@ -25,11 +25,70 @@
     }
   }
   &-book {
+    // background: #95BB54;
+    // border-radius: 100px;
+    // @include transition(.3);
+    // &:hover {
+    //   background: #6D9E18;
+    // }
+  }
+  &-book {
+    line-height: 1;
+    color: #fff;
     background: #95BB54;
+    padding: 18px 58px;
+    cursor: pointer;
+    border: none;
     border-radius: 100px;
-    @include transition(.3);
-    &:hover {
+    overflow: hidden;
+    position: relative;
+    @include fontSize(16, 18);
+    font-weight: 700;
+    z-index: 10;
+    & img {
+      position: absolute;
+    }
+    &:before, &:after {
+      padding: 30px 52px;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(-100% - 30px);
+      height: calc(100% - 29px);
+      width: calc(100% + 20px);
+      color: #fff;
+      border-radius: 2px;
+      transform: skew(-25deg);
+    }
+    &:after {
+      background: #fff;
+      transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+      z-index: -2;
+      opacity: 0.8;
+    }
+    &:before {
       background: #6D9E18;
+      z-index: -1;
+      transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+    &:hover {
+      &:after {
+        left: calc(0% - 10px);
+        transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      &:before {
+        left: calc(0% - 10px);
+        transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+    }
+    &.--modified {
+      padding: 0;
+      &:before, &:after {
+        padding: 30px 34px;
+      }
+      &:before {
+        background: #CB6B4C;
+      }
     }
   }
   &-squared {
@@ -39,11 +98,6 @@
       background: $greenHoverColor;
     }
   }
-}
-
-:root {
-  --background: #4285f4;
-  --icon-color: #344955;
 }
 
 .floating-menu {
@@ -65,29 +119,20 @@
     align-items: center;
     &:first-child {
       margin-bottom: 22px;
-      .fab {
-        &:before {
-          content: "\e904";
-        }
-      }
     }
     .fab {
       background: $greenColor;
       width: 50px;
       height: 50px;
       position: relative;
-      z-index: 3;
       border-radius: 100px;
       display: flex;
       justify-content: center;
       align-items: center;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       animation: fab-animation-reverse 0.4s ease-out forwards;
-      &::before {
-        font-family: 'icomoon';
-        content: "\e91e";
+      & i:before {
         color: $whiteColor;
-        font-size: 26px;
       }
     }
     .fac {
@@ -115,75 +160,113 @@
         }
       }
     }
-    input {
-      height: 100%;
-      width: 100%;
-      border-radius: 100px;
-      cursor: pointer;
-      position: absolute;
-      z-index: 99;
-      opacity: 0;
-      &:checked {
-        ~ .fab {
-          animation: fab-animation 0.4s ease-out forwards;
-          &::before {
-            content: "\e905";
-            font-size: 34px;
-          }
-        }
-        ~ .fac {
-          width: 260px;
-          height: 68px;
-          right: -6px;
-          padding-right: 60px;
-          animation: fac-animation 0.4s ease-out forwards 0.1s;
-          opacity: 1;
-        }
+    // input {
+    //   height: 100%;
+    //   width: 100%;
+    //   border-radius: 100px;
+    //   cursor: pointer;
+    //   position: absolute;
+    //   z-index: 99;
+    //   opacity: 0;
+    //   &:checked {
+    //     ~ .fab {
+    //       animation: fab-animation 0.4s ease-out forwards;
+    //       &::before {
+    //         content: "\e905";
+    //         font-size: 34px;
+    //       }
+    //     }
+    //     ~ .fac {
+    //       width: 260px;
+    //       height: 68px;
+    //       right: -6px;
+    //       padding-right: 60px;
+    //       animation: fac-animation 0.4s ease-out forwards 0.1s;
+    //       opacity: 1;
+    //     }
+    //   }
+    // }
+  }
+}
+
+.wrapper-more {
+  &.active {
+    & .fac {
+      width: 260px;
+      height: 68px;
+      right: -6px;
+      padding-right: 60px;
+      animation: fac-animation 0.4s ease-out forwards 0.1s;
+      opacity: 1;
+    }
+    & .--modified {
+      &:after {
+        left: calc(0% - 10px);
+        transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+      }
+      &:before {
+        background: #CB6B4C;
+        left: calc(0% - 10px);
+        transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
       }
     }
   }
 }
 
+button {
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  background: #95BB54;
+  padding: 18px 58px;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
 
+button span {
+  display: block;
+  position: relative;
+  @include fontSize(16, 18);
+  font-weight: 700;
+  z-index: 10;
+}
 
-// @keyframes fab-animation {
-//   0% {
-//     transform: scale(1);
-//   }
-//   20% {
-//     transform: scale(0.93);
-//   }
-//   55% {
-//     transform: scale(0.97);
-//   }
-//   80% {
-//     transform: scale(0.94);
-//   }
-//   100% {
-//     transform: scale(0.95);
-//   }
-// }
+button:after,
+button:before {
+  padding: 30px 52px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: calc(100% - 29px);
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
 
-// @keyframes fab-animation-reverse {
-//   0% {
-//     transform: scale(0.95);
-//   }
-//   100% {
-//     transform: scale(1);
-//   }
-// }
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
 
-// @keyframes fac-animation {
-//   0% {
-//     transform: scale(1, 1);
-//   }
-//   33% {
-//     transform: scale(0.95, 1.05);
-//   }
-//   66% {
-//     transform: scale(1.05, 0.95);
-//   }
-//   100% {
-//     transform: scale(1, 1);
-//   }
-// }
+button:before {
+  background: #6D9E18;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}

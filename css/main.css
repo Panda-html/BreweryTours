@@ -560,16 +560,73 @@ table {
 }
 
 .btn-book {
+  line-height: 1;
+  color: #fff;
   background: #95BB54;
+  padding: 18px 58px;
+  cursor: pointer;
+  border: none;
   border-radius: 100px;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  overflow: hidden;
+  position: relative;
+  font-size: 18px;
+  font-size: -webkit-calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-weight: 700;
+  z-index: 10;
 }
 
-.btn-book:hover {
+.btn-book img {
+  position: absolute;
+}
+
+.btn-book:before, .btn-book:after {
+  padding: 30px 52px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: calc(100% - 29px);
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+.btn-book:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: -2;
+  opacity: 0.8;
+}
+
+.btn-book:before {
   background: #6D9E18;
+  z-index: -1;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-book:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-book:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.btn-book.--modified {
+  padding: 0;
+}
+
+.btn-book.--modified:before, .btn-book.--modified:after {
+  padding: 30px 34px;
+}
+
+.btn-book.--modified:before {
+  background: #CB6B4C;
 }
 
 .btn-squared {
@@ -579,11 +636,6 @@ table {
 
 .btn-squared:hover {
   background: #6D9E18;
-}
-
-:root {
-  --background: #4285f4;
-  --icon-color: #344955;
 }
 
 .floating-menu {
@@ -614,16 +666,11 @@ table {
   margin-bottom: 22px;
 }
 
-.floating-menu .wrapper:first-child .fab:before {
-  content: "\e904";
-}
-
 .floating-menu .wrapper .fab {
   background: #95BB54;
   width: 50px;
   height: 50px;
   position: relative;
-  z-index: 3;
   border-radius: 100px;
   display: flex;
   justify-content: center;
@@ -632,11 +679,8 @@ table {
   animation: fab-animation-reverse 0.4s ease-out forwards;
 }
 
-.floating-menu .wrapper .fab::before {
-  font-family: 'icomoon';
-  content: "\e91e";
+.floating-menu .wrapper .fab i:before {
   color: #ffffff;
-  font-size: 26px;
 }
 
 .floating-menu .wrapper .fac {
@@ -670,32 +714,85 @@ table {
   transform: scale(1.1);
 }
 
-.floating-menu .wrapper input {
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  cursor: pointer;
-  position: absolute;
-  z-index: 99;
-  opacity: 0;
-}
-
-.floating-menu .wrapper input:checked ~ .fab {
-  animation: fab-animation 0.4s ease-out forwards;
-}
-
-.floating-menu .wrapper input:checked ~ .fab::before {
-  content: "\e905";
-  font-size: 34px;
-}
-
-.floating-menu .wrapper input:checked ~ .fac {
+.wrapper-more.active .fac {
   width: 260px;
   height: 68px;
   right: -6px;
   padding-right: 60px;
   animation: fac-animation 0.4s ease-out forwards 0.1s;
   opacity: 1;
+}
+
+.wrapper-more.active .--modified:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.wrapper-more.active .--modified:before {
+  background: #CB6B4C;
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button {
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  background: #95BB54;
+  padding: 18px 58px;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+button span {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-size: -webkit-calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1900 - 300)));
+  font-weight: 700;
+  z-index: 10;
+}
+
+button:after,
+button:before {
+  padding: 30px 52px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: calc(100% - 29px);
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+button:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+button:before {
+  background: #6D9E18;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+button:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .modal {
@@ -1871,7 +1968,7 @@ table {
 }
 
 .primary-menu .menu-item__link {
-  padding: 10px 18px 10px 0;
+  padding: 0 18px;
   font-weight: 600;
   font-size: 16px;
   font-size: -webkit-calc(14px + (16 - 14) * ((100vw - 300px) / (1900 - 300)));
@@ -2608,8 +2705,17 @@ html.fp-enabled,
   color: #ffffff;
 }
 
-.main-screen__title h1 {
-  margin-bottom: 30px;
+.main-screen__title p {
+  font-size: 58px;
+  font-size: -webkit-calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
+  font-size: -moz-calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
+  font-size: calc(32px + (58 - 32) * ((100vw - 300px) / (1900 - 300)));
+  line-height: 1.35;
+  font-weight: bold;
+}
+
+.main-screen__title a {
+  margin-top: 30px;
 }
 
 .main-screen__rewards {
