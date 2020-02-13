@@ -379,6 +379,15 @@ table {
   line-height: 1.6;
 }
 
+.icon-twitter:before {
+  content: "\e907";
+  color: #03a9f4;
+}
+
+.icon-icon-instagram:before {
+  content: "\e908";
+}
+
 .icon-question-1:before {
   content: "\e91e";
   color: #fff;
@@ -435,17 +444,6 @@ table {
   content: "\e906";
 }
 
-.icon-icon-facebook-circle .path1:before {
-  content: "\e907";
-  color: white;
-}
-
-.icon-icon-facebook-circle .path2:before {
-  content: "\e908";
-  margin-left: -1em;
-  color: #3a559f;
-}
-
 .icon-icon-facebook:before {
   content: "\e909";
   color: #4267b2;
@@ -454,29 +452,6 @@ table {
 .icon-icon-google:before {
   content: "\e90a";
   color: #d02c1f;
-}
-
-.icon-icon-instagram-circle .path1:before {
-  content: "\e90b";
-  color: white;
-}
-
-.icon-icon-instagram-circle .path2:before {
-  content: "\e90c";
-  margin-left: -1em;
-  color: black;
-}
-
-.icon-icon-instagram-circle .path3:before {
-  content: "\e90d";
-  margin-left: -1em;
-  color: black;
-}
-
-.icon-icon-instagram-circle .path4:before {
-  content: "\e90e";
-  margin-left: -1em;
-  color: black;
 }
 
 .icon-icon-instagram:before {
@@ -537,17 +512,6 @@ table {
 .icon-icon-tripadvisor:before {
   content: "\e916";
   color: #00a680;
-}
-
-.icon-icon-twitter-circle .path1:before {
-  content: "\e917";
-  color: white;
-}
-
-.icon-icon-twitter-circle .path2:before {
-  content: "\e918";
-  margin-left: -1em;
-  color: #03a9f4;
 }
 
 .icon-icon-victoria-1:before {
@@ -1684,6 +1648,103 @@ table {
   }
 }
 
+.footer {
+  padding-top: 30px !important;
+  background: #000000;
+  color: #ffffff;
+}
+
+.footer-row {
+  margin-bottom: 24px;
+}
+
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-list__item {
+  padding: 0 12px 12px 12px;
+}
+
+.footer-list__item a {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+}
+
+.footer-list__item a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.footer-list__item a:hover:before {
+  width: 100%;
+}
+
+.footer-socials {
+  display: flex;
+}
+
+.footer-socials__item {
+  margin: 0 6px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  display: block;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-sitemap {
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+}
+
+.footer-sitemap:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ffffff;
+  bottom: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.footer-sitemap:hover:before {
+  width: 100%;
+}
+
+.footer-partners__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 24px;
+}
+
+.footer-partners__item img {
+  margin: 8px 0;
+}
+
 .header {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.16);
   padding: 10px 0;
@@ -2672,6 +2733,11 @@ html.fp-enabled,
   position: relative;
   width: 13vw;
   cursor: pointer;
+  filter: saturate(0%);
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .app-section-3 .home-images .image-item:before {
@@ -2683,9 +2749,13 @@ html.fp-enabled,
   opacity: 0;
   width: 100%;
   height: 100%;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
-.app-section-3 .home-images .image-item.active img {
+.app-section-3 .home-images .image-item.active {
   filter: unset;
 }
 
@@ -2713,7 +2783,6 @@ html.fp-enabled,
 
 .app-section-3 .home-images .image-item img {
   object-fit: cover;
-  filter: saturate(0%);
 }
 
 .app-section-3 .home-images .image-item:nth-child(even) {

@@ -20,8 +20,9 @@ let front = {
             licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
             // responsiveHeight: 992,
             anchors: ['app-section-1', 'app-section-2', 'app-section-3', 'app-section-4',
-                'app-section-5'],
+                'app-section-5', 'footer'],
             paddingTop: '80px',
+            // normalScrollElements: '.footer',
             slidesNavigation: false,
             slidesToSections: true
         });
