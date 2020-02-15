@@ -166,6 +166,9 @@
       margin-bottom: 30px;
       @media (max-width: $breakpoint-lg) {
         margin-bottom: 18px;
+        &__link {
+          padding: 0;
+        }
       }
       & > img {
         position: absolute;
@@ -183,8 +186,8 @@
       }
       & .submenu {
         display: none;
-        margin-top: -47px;
-        margin-left: 270px;
+        margin-top: -50px;
+        margin-left: 290px;
         &.menuOpen {
           padding-top: 28px;
           margin-left: 0;
@@ -193,8 +196,8 @@
           position: fixed;
           overflow: scroll;
           z-index: 109;
-          padding: 28px 15px 15px 15px;
-          top: 150px;
+          padding: 48px 15px 15px 15px;
+          top: 130px;
           left: 0;
           background: $whiteColor;
           display: flex;
@@ -337,18 +340,19 @@
 }
 
 .nav-title {
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 25px;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
   & i {
-    padding-right: 20px;
+    padding-right: 10px;
     &:before {
       transform: rotate(90deg);
       display: block;
-      width: 30px;
-      height: 30;
-      font-size: 30px;
+      width: 22px;
+      height: 22px;
+      font-size: 22px;
     }
   }
 }

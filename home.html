@@ -18,11 +18,13 @@
   <!-- <div class="body-padding"></div> -->
   <div class="floating-menu">
     <div class="wrapper wrapper-chat">
-      <div href="#" class="btn-book --modified fab">
+      <!-- <span class="tooltip">Write us</span> -->
+      <div class="btn-book --modified fab">
         <i class="icon-icon-chat"></i>
       </div>
     </div>
-    <div class="wrapper wrapper-more">
+    <div class="wrapper wrapper-more tooltip" data-tooltip-content="#tooltip_content">
+      <!-- <span class="tooltip">More</span> -->
       <div class="btn-book --modified fab">
         <i class="icon-question-1"></i>
       </div>
@@ -188,8 +190,8 @@
       <div class="container-fluid p-0 full-height d-flex align-middle --relative">
         <div class="row d-flex align-center">
           <div class="col-md-10">
-            <div class="row">
-              <div class="col-md-6">
+            <div class="row app-section-2-content">
+              <div class="col-md-6 col-xs-11">
                 <h2 class="app-screen__title">Enjoy by the beer, cider & spirit connoisseur</h2>
                 <p class="app-screen__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                   eiusmod
@@ -200,9 +202,12 @@
                   consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                   enim
                   ad minim veniam, quis nostrud exercitation ullamco </p>
-                <a href="" class="btn btn-book">VIEW TOURS</a>
+                <div class="btn-wrap">
+                  <a href="" class="btn btn-book">VIEW TOURS</a>
+                </div>
+
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12">
                 <div class="home-images">
                   <div class="image-item default-icon">
                     <img src="./img/home-section1-image1.jpg" alt="">
@@ -226,9 +231,9 @@
     <section class="section app-section-3" id="section3">
       <div class="container-fluid p-0 --relative full-height d-flex align-middle align-center">
         <div class="row d-flex align-center w-100">
-          <div class="col-md-10">
-            <div class="row">
-              <div class="col-md-4">
+          <div class="col-lg-10 col-xs-12">
+            <div class="row d-flex align-middle">
+              <div class="col-lg-4 col-md-5 col-xs-12">
                 <div class="home-images tab">
                   <div class="image-item default-icon active tablinks"
                     onmouseover="front.hoverTab(event, 'hoverTab-1')">
@@ -272,7 +277,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-7 col-md-6 col-xs-12">
                 <div class="home-tabs">
                   <div class="tabcontent" id="hoverTab-1">
                     <h2 class="app-screen__title">We want to provide
@@ -288,7 +293,9 @@
                       consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                       enim
                       ad minim veniam, quis nostrud exercitation ullamco </p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                   <div class="tabcontent" id="hoverTab-2">
                     <h2 class="app-screen__title">tab 2 with some more text tab 2 with some more text</h2>
@@ -298,7 +305,9 @@
                       exercitation
                       ullamco ipsum dolor sit amet, or incididunt ut labore et dolore magna aliqua. Ut enim
                       ad minim veniam, quis nostrud exercitation ullamco </p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                   <div class="tabcontent" id="hoverTab-3">
                     <h2 class="app-screen__title">tab 3</h2>
@@ -308,7 +317,9 @@
                       exercitation
                       ullamco ipsum dolor sit amet, or incididunt ut labore et dolore magna aliqua. Ut enim
                       ad minim veniam, quis nostrud exercitation ullamco </p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                   <div class="tabcontent" id="hoverTab-4">
                     <h2 class="app-screen__title">tab 4.</h2>
@@ -318,7 +329,9 @@
                       exercitation
                       ullamco ipsum dolor sit amet, or incididunt ut labore et dolore magna aliqua. Ut enim
                       ad minim veniam, quis nostrud exercitation ullamco </p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                   <div class="tabcontent" id="hoverTab-5">
                     <h2 class="app-screen__title">We want to provide
@@ -332,13 +345,17 @@
                       labore, eligendi ipsum? Laborum nisi consequatur mollitia sunt explicabo voluptate ullam cum hic
                       consequuntur. Deserunt corrupti illum temporibus placeat, blanditiis commodi tempore sunt quisquam
                       officia delectus.</p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                   <div class="tabcontent" id="hoverTab-6">
                     <h2 class="app-screen__title">Lorem ipsum dolor sit amet.</h2>
                     <p class="app-screen__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                       deserunt voluptate exercitationem sint repudiandae amet odio, illum laborum atque velit?</p>
-                    <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    <div class="btn-wrap">
+                      <a href="#" class="btn btn-book">VIEW TOURS</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -383,12 +400,13 @@
       </div>
     </section>
     <section class="section app-section-5" id="section5">
+      <div class="image-item">
+        <img src="./img/home-section4-image1.jpg" alt="">
+      </div>
       <div class="container full-height">
         <div class="row align-middle full-height">
           <div class="col-md-5 full-height">
-            <div class="image-item">
-              <img src="./img/home-section4-image1.jpg" alt="">
-            </div>
+
           </div>
           <div class="col-md-6">
             <h2 class="app-screen__title">About us</h2>
@@ -398,15 +416,22 @@
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco ipsum dolor sit amet,
               consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
               minim veniam, quis nostrud exercitation ullamco </p>
-            <a href="#" class="btn btn-book">VIEW TOURS</a>
+            <div class="btn-wrap">
+              <a href="#" class="btn btn-book">VIEW TOURS</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <footer class="section footer fp-auto-height">
       <div class="container">
+        <div class="tooltip_templates">
+          <span id="tooltip_content">
+              <img src="myimage.png" /> <strong>This is the content of my tooltip!</strong>
+          </span>
+      </div>
         <div class="row d-flex align-center">
-          <div class="col-md-5 d-flex flex-column align-middle">
+          <div class="col-lg-5 col-md-8 col-xs-12 d-flex flex-column align-middle">
             <div class="footer-row">
               <a href="#" class="footer-logo">
                 <img src="./img/logo-footer.svg" alt="">
@@ -472,12 +497,15 @@
         </div>
       </div>
     </footer>
+
   </main>
 
+  
 
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
   <script src="js/libs/fullpage.js"></script>
+  <script src="js/libs/tooltipster.min.js"></script>
   <script src="js/libs/flickity.pkgd.min.js"></script>
   <script src="js/sliders.js"></script>
   <script src="js/brewerytours.js"></script>

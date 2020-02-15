@@ -3,19 +3,22 @@
 
 
 section.section {
-  // padding-top: 80px;
-  // margin-top: 40px;
-  // top: 80px;
-  // @media (max-width: $breakpoint-lg)
+  @media (max-width: $breakpoint-xl) {
+    position: relative;
+    height: 100vh;
+  }
+  @media (max-width: $breakpoint-lg) {
+    height: auto;
+    padding-top: 24px;
+  }
 }
 
 .main-screen {
-  // padding-top: 80px;
-  // height: 200vh;
-  // margin-top: 80px;
-  // height: calc(100vh - 80px);
-  @media (max-width: $breakpoint-lg) {
-    // height: calc(100vh - 80px);
+  @media (max-width: $breakpoint-xl) {
+    &.section {
+      height: 100vh;
+      padding-top: 80px;
+    }
   }
   &__title {
     color: $whiteColor;
@@ -32,12 +35,13 @@ section.section {
     position: absolute;
     bottom: 35px;
     right: 120px;
-    @media (max-width: $breakpoint-lg) {
+    @media (max-width: $breakpoint-xl) {
       position: static;
+      margin-top: 12px;
     }
     &--container {
       justify-content: flex-end;
-      @media (max-width: $breakpoint-lg) {
+      @media (max-width: $breakpoint-xl) {
         justify-content: center;
       }
     }
@@ -72,13 +76,43 @@ section.section {
   }
 }
 
+.btn-wrap {
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .app-section-2 {
+  &-content {
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      justify-content: center;
+    }
+  }
   .home-images {
     position: absolute;
     right: 0;
     top: 0;
+    @media (max-width: $breakpoint-lg) {
+      position: static;
+    }
+    @media (max-width: $breakpoint-md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 60%;
+      margin: 40px auto 0 auto;
+    }
+    @media (max-width: 540px) {
+      max-width: 80%;
+    }
+    @media (max-width: 440px) {
+      max-width: 100%;
+    }
     & .image-item {
       position: absolute;
+      overflow: hidden;
       & img {
         object-fit: cover;
       }
@@ -96,11 +130,58 @@ section.section {
         width: 19vw;
         right: 20vw;
         top: 42vh;
+        border-radius: 10px 0px 0px 10px;
       }
       &:nth-child(4) {
         width: 20vw;
         top: 49vh;
         right: 0;
+        border-radius: 0px 0px 0px 10px;
+      }
+      @media (max-width: $breakpoint-xl) {
+        &:nth-child(1) {
+          width: 140px;
+          right: 190px;
+          top: 11vh;
+        }
+        &:nth-child(2) { 
+          width: 190px;
+          top: 14vh;
+        }
+        &:nth-child(3) {
+          width: 158px;
+          right: 200px;
+        }
+        &:nth-child(4) {
+          width: 200px;
+          top: 42vh;
+        }
+      }
+      @media (max-width: $breakpoint-md) {
+        position: static;
+        &:nth-child(1) {
+          width: 152px;
+          height: 212px;
+          margin-top: -20px;
+        }
+        &:nth-child(2) {
+          width: 168px;
+          height: 242px;
+          border-radius: 0px 10px 0px 0;
+        }
+        &:nth-child(3) {
+          width: 152px;
+          height: 212px;
+          margin-top: -56px;
+          width: 170px;
+          margin-left: -16px;
+        }
+        &:nth-child(4) {
+          width: 180px;
+          height: 185px;
+          margin-right: -10px;
+          border-radius: 0 10px 10px 10px;
+        }
       }
     }
   }
@@ -108,30 +189,60 @@ section.section {
 
 .tabcontent {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  & .app-screen__title {
+    width: 100%;
+  }
+  & .btn {
+    align-self: flex-start;
+  }
   &:first-child {
     display: block;
   }
 }
+
+.home-tabs {
+  @media (max-width: $breakpoint-md) {
+    flex: 0 0 91.66666%;
+    max-width: 91.66666%;
+    margin: 0 auto;
+  }
+}
+
 
 .app-section-3 {
   & .home-images {
     position: absolute;
     left: 0;
     top: 0;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 33.33333%;
-    -ms-flex: 0 0 33.33333%;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
     display: flex;
     flex-wrap: wrap;
     height: auto;
+    @media (max-width: $breakpoint-lg) {
+      position: static;
+      max-width: 100%;
+      flex: unset;
+    }
+    @media (max-width: $breakpoint-md) {
+      padding: 20px 0;
+    }
     & .image-item {
       position: relative;
       width: 13vw;
       cursor: pointer;
       filter: saturate(0%);
       @include transition(.3);
+      @media (max-width: $breakpoint-xl) {
+        width: 16vw;
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 33.333%;
+      }
       &:before {
         content: '';
         position: absolute;
@@ -155,8 +266,8 @@ section.section {
         height: 100%;
         z-index: 9;
         top: 0;
-        font-size: 27px;
-        line-height: 34px;
+        @include fontSize(16, 27);
+        line-height: 1.2;
         color: $whiteColor;
         font-weight: 800;
         position: absolute;
@@ -168,11 +279,19 @@ section.section {
       }
       & img {
         object-fit: cover;
-        // filter: saturate(0%);
-        // @include transition(.3);
       }
       &:nth-child(even) {
         top: 10vh;
+        @media (max-width: $breakpoint-md) {
+          top: unset;
+        }
+      }
+      &:nth-child(2) {
+        border-radius: 0 10px 0 0;
+        overflow: hidden;
+        @media (max-width: $breakpoint-md) {
+          border-radius: 0;
+        }
       }
     }
   }
@@ -184,12 +303,34 @@ section.section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: $breakpoint-xl) {
+    height: auto;
+  }
 }
 
+
+.section.app-section-4 {
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 100px;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding-top: 30px;
+  }
+}
+
+
 .app-section-4 {
+  &.secion {
+    @media (max-width: $breakpoint-grid-xl) {
+      height: auto;
+    }
+  }
   & .home-images {
     display: flex;
     justify-content: space-between;
+    @media (max-width: $breakpoint-md) {
+      flex-wrap: wrap;
+    }
     & .image-item {
       width: 28vw;
       height: 51vh;
@@ -197,14 +338,31 @@ section.section {
       filter: saturate(0%);
       @include transition(.3);
       overflow: hidden;
+      @media (max-width: $breakpoint-xl) {
+        filter: unset;
+        height: 41vh;
+      }
+      @media (max-width: $breakpoint-md) {
+        width: 100%;
+        height: 320px;
+      }
       &:nth-child(1) {
         border-radius: 0px 10px 0px 0px;
+        @media (max-width: $breakpoint-md) {
+          border-radius: 0;
+        }
       }
       &:nth-child(2) {
         border-radius: 10px 10px 0px 0px;
+        @media (max-width: $breakpoint-md) {
+          border-radius: 0;
+        }
       }
       &:nth-child(3) {
         border-radius: 10px 0px 0px 0px;
+        @media (max-width: $breakpoint-md) {
+          border-radius: 0;
+        }
       }
       & img {
         display: block;
@@ -222,6 +380,9 @@ section.section {
         background: rgba(0, 0, 0, 0.3);
         opacity: 0;
         @include transition(.3);
+        @media (max-width: $breakpoint-xl) {
+          opacity: 1;
+        }
       }
       &:hover {
         filter: unset;
@@ -248,12 +409,26 @@ section.section {
 }
 
 .app-section-5 {
+  @media (max-width: $breakpoint-md) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  & .row:first-of-type {
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column-reverse;
+    }
+  }
   & .image-item {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 40vw;
+    @media (max-width: $breakpoint-md) {
+      position: static;
+      width: 100%;
+      margin-top: 20px;
+    }
     & img {
       display: block;
       width: 100%;
@@ -262,6 +437,9 @@ section.section {
     }
   }
   & .col-md-6 {
-    padding-left: 40px;
+    padding: 40px 0 40px 40px;
+    @media (max-width: $breakpoint-md) {
+      padding: 0 0 10px 0;
+    }
   }
 }

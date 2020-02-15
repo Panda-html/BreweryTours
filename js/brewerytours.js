@@ -4,6 +4,7 @@ let front = {
   primaryNav: $('.primary-navigation'),
   cart: $('.header-cart'),
   fixedButton: $('.wrapper-more'),  
+  submenu: $('.submenu'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -16,12 +17,13 @@ let front = {
   init: function () {
       this.events();
       this.headerScroll();
-      if (window.matchMedia("(min-width: 992px)").matches) {
+      if (window.matchMedia("(min-width: 1200px)").matches) {
         new fullpage('#fullpage', {
             licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
             // responsiveHeight: 992,
             anchors: ['app-section-1', 'app-section-2', 'app-section-3', 'app-section-4',
                 'app-section-5', 'footer'],
+            // normalScrollElements: 'footer',
             paddingTop: '80px',
             // normalScrollElements: '.footer',
             slidesNavigation: false,
@@ -50,13 +52,17 @@ let front = {
       if (!this.hamburger.hasClass('open')) {
           this.hamburger.addClass('open');
           this.nav.toggleClass('active');
-          this.primaryNav.toggleClass('active')
-          this.cart.toggleClass('active')
+          this.primaryNav.toggleClass('active');
+          this.cart.toggleClass('active');
+          this.submenu.removeClass('menuOpen')
+          this.submenu.find('p').remove()
       } else {
           this.hamburger.removeClass('open');
           this.nav.toggleClass('active');
-          this.primaryNav.toggleClass('active')
-          this.cart.toggleClass('active')
+          this.primaryNav.toggleClass('active');
+          this.cart.toggleClass('active');
+          this.submenu.removeClass('menuOpen')
+          this.submenu.find('p').remove()
       }
   },
   toggleBtn: function() {
@@ -115,7 +121,7 @@ let front = {
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "block";
+    document.getElementById(tabName).style.display = "flex";
     el.currentTarget.className += " active";
   },
 
