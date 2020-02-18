@@ -130,27 +130,62 @@
   <div class="body-padding"></div>
 
   <section class="first-screen">
-    <div class="container">
+    <div class="container full-height">
       <div class="row">
         <div class="first-screen__background">
           <img src="./img/tours-main-image.jpg" alt="">
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="first-screen__title">
-            <h1 class="heading-1 --bold">
-              PUBLIC TOURS  
-            </h1>
-          </div>
-          <div class="first-screen__description heading-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <div class="row d-flex align-center full-height">
+        <div class="col-md-6 full-height d-flex align-middle text-center">
+          <div class="first-screen__content">
+            <div class="first-screen__title">
+              <h1 class="heading-1 --bold">
+                PUBLIC TOURS
+              </h1>
+            </div>
+            <div class="first-screen__description heading-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
+  <section class="breadcrumb">
+    <div class="container">
+      <div class="kama_breadcrumbs">
+        <span>
+          <a href="#">
+            <span>Main</span>
+          </a>
+        </span>
+        <span class="kb_title">Public Tours</span>
+      </div>
+    </div>
+  </section>
+  <section class="filters">
+    <div class="container">
+      <div class="row">
+        <div class="filters-heading heading-4 --semibold text-center w-100">
+          filters
+        </div>
+      </div>
+      <div class="row m-row">
+        <div class="custom-select" style="width:200px;">
+          <select>
+            <option value="0">Victoria</option>
+            <option value="1" selected>Victoria</option>
+            <option value="2">New South Wales</option>
+            <option value="3">Tasmania</option>
+            <option value="4">Quensland</option>
+            <option value="5">New Zealand</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
@@ -229,6 +264,7 @@
   <script src="js/libs/tooltipster.min.js"></script>
   <script src="js/libs/flickity.pkgd.min.js"></script>
   <script src="js/sliders.js"></script>
+  <script src="js/custom-select.js"></script>
   <script src="js/brewerytours.js"></script>
 </body>
 

@@ -1,0 +1,33 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.breadcrumb {
+  & .kama_breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & a {
+    display: block;
+    position: relative;
+    margin-right: 20px;
+    & span {
+      color: #AFAFAF;
+    }
+    &:before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: #AFAFAF;
+      border-radius: 100px;
+      position: absolute;
+      right: -12px;
+      top: calc(50% - 2px);
+    }
+  }
+  & span {
+    color: #333333;
+    font-size: 14px;
+    line-height: 19px;
+    display: block;
+  }
+}
