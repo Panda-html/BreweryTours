@@ -3,7 +3,8 @@
 
 .custom-select {
   position: relative;
-  width: 218px;
+  min-width: 218px;
+  // width: 100%;
 }
 
 .custom-select select {
@@ -38,7 +39,7 @@
 /*style items (options):*/
 .select-items {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   right: 0;
   z-index: 99;
@@ -59,9 +60,10 @@
 }
 
 .custom-select {
+  margin-right: 4px;
   & > div:first-of-type {
     border-radius: 4px;
-    padding: 9px 24px 9px 20px;
+    padding: 11px 24px 11px 20px;
     color: $whiteColor;
     display: flex;
     align-items: center;
@@ -86,7 +88,7 @@
   }
   & .select-selected, .victoria {
     background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
-    margin-top: 5px;
+    // margin-top: 5px;
     &:after {
       content: "\e91a";
       font-family: 'icomoon';
@@ -94,7 +96,6 @@
   }
   & .nsw {
     background: linear-gradient(101.41deg, #2E72BC 0%, #D10021 100%);
-    border: 2px solid #AADB56;
     &:after {
       content: "\e910";
       font-family: 'icomoon';

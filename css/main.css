@@ -1104,7 +1104,7 @@ table {
 
 .custom-select {
   position: relative;
-  width: 218px;
+  min-width: 218px;
 }
 
 .custom-select select {
@@ -1124,7 +1124,7 @@ table {
 /*style items (options):*/
 .select-items {
   position: absolute;
-  top: 100%;
+  top: 110%;
   left: 0;
   right: 0;
   z-index: 99;
@@ -1146,9 +1146,13 @@ table {
   display: none;
 }
 
+.custom-select {
+  margin-right: 4px;
+}
+
 .custom-select > div:first-of-type {
   border-radius: 4px;
-  padding: 9px 24px 9px 20px;
+  padding: 11px 24px 11px 20px;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -1178,7 +1182,6 @@ table {
 
 .custom-select .select-selected, .custom-select .victoria {
   background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
-  margin-top: 5px;
 }
 
 .custom-select .select-selected:after, .custom-select .victoria:after {
@@ -1188,7 +1191,6 @@ table {
 
 .custom-select .nsw {
   background: linear-gradient(101.41deg, #2E72BC 0%, #D10021 100%);
-  border: 2px solid #AADB56;
 }
 
 .custom-select .nsw:after {
@@ -3772,7 +3774,43 @@ html.fp-enabled,
   width: 100%;
 }
 
-.filters {
-  margin: 100px 0 300px 0;
+.filter {
+  margin: 16px 0 300px 0;
+}
+
+.filter-wrapper > form {
+  width: 100%;
+}
+
+.filter-heading {
+  margin-bottom: 16px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter__list {
+  margin: 0 4px;
+  padding: 11px 16px;
+  border: 1px solid #95BB54;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.filter input {
+  padding: 11px 16px;
+  margin-left: 4px;
+  width: 100%;
+  background: #95BB54;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */

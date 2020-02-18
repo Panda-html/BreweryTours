@@ -165,25 +165,46 @@
       </div>
     </div>
   </section>
-  <section class="filters">
+  <section class="filter">
     <div class="container">
       <div class="row">
-        <div class="filters-heading heading-4 --semibold text-center w-100">
+        <div class="filter-heading heading-4 --semibold text-center w-100">
           filters
         </div>
       </div>
-      <div class="row m-row">
+      <div class="row m-row filter-wrapper">
         <form action="">
-          <div class="custom-select">
-            <select>
-              <option value="0">Victoria</option>
-              <option value="1" class="victoria">Victoria</option>
-              <option value="2" class="nsw">New South Wales</option>
-              <option value="3" class="tasmania">Tasmania</option>
-              <option value="4" class="quensland">Quensland</option>
-              <option value="5" class="newZealand">New Zealand</option>
-            </select>
+          <div class="filter-container">
+            <div class="custom-select">
+              <select>
+                <option value="0">Victoria</option>
+                <option value="1" class="victoria">Victoria</option>
+                <option value="2" class="nsw">New South Wales</option>
+                <option value="3" class="tasmania">Tasmania</option>
+                <option value="4" class="quensland">Quensland</option>
+                <option value="5" class="newZealand">New Zealand</option>
+              </select>
+            </div>
+            <div class="filter__list">
+              Departs
+            </div>
+            <div class="filter__list">
+              Destination
+            </div>
+            <div class="filter__list">
+              Type of drinks
+            </div>
+            <div class="filter__list">
+              Price
+            </div>
+            <div class="filter__list">
+              Day of a week
+            </div>
+           
+              <input type="submit" value="SEARCH">
+          
           </div>
+
         </form>
       </div>
     </div>
