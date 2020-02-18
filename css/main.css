@@ -1029,6 +1029,10 @@ table {
   left: 25px;
 }
 
+* {
+  outline: 0.2px solid rgba(255, 0, 0, 0.5);
+}
+
 .container {
   max-width: 1320px;
   margin: auto;
@@ -2961,19 +2965,23 @@ html.fp-enabled,
 
 .main-screen__rewards {
   position: absolute;
-  bottom: 35px;
-  right: 120px;
+  top: -35px;
+  display: flex;
+  flex-direction: row-reverse;
+  right: 55px;
 }
 
 @media (max-width: 1200px) {
   .main-screen__rewards {
     position: static;
+    flex-wrap: wrap;
     margin-top: 12px;
   }
 }
 
 .main-screen__rewards--container {
   justify-content: flex-end;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -2986,6 +2994,27 @@ html.fp-enabled,
   width: 64px;
   height: 64px;
   margin-right: 12px;
+}
+
+.main-screen__rewards .rewards__item:nth-child(n+2) {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+@media (max-width: 1200px) {
+  .main-screen__rewards .rewards__item:nth-child(n+2) {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.main-screen__rewards .rewards__item:first-child:hover ~ .rewards__item {
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-screen__image {
