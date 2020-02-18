@@ -1,0 +1,125 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.custom-select {
+  position: relative;
+  width: 218px;
+}
+
+.custom-select select {
+  display: none; 
+}
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  // position: absolute;
+  // content: "\e902";
+  // font-family: 'icomoon';
+  // display: block;
+  // right: 18px;
+  // top: calc(50% - 8px);
+  // @include transition(.3);
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:before {
+  // transform: rotate(-180deg);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 9px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  & div {
+    border-radius: 100px;
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+    &:after {
+      padding-left: 10px;
+    }
+  }
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.custom-select {
+  & > div:first-of-type {
+    border-radius: 4px;
+    padding: 9px 24px 9px 20px;
+    color: $whiteColor;
+    display: flex;
+    align-items: center;
+    &:before {
+      position: absolute;
+      content: "\e902";
+      font-family: 'icomoon';
+      display: block;
+      right: 18px;
+      top: calc(50% - 8px);
+      color: $whiteColor;
+      @include transition(.3);
+    }
+    &:after {
+      padding-left: 10px;
+    }
+    &.select-arrow-active {
+      &:before {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+  & .select-selected, .victoria {
+    background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
+    margin-top: 5px;
+    &:after {
+      content: "\e91a";
+      font-family: 'icomoon';
+    }
+  }
+  & .nsw {
+    background: linear-gradient(101.41deg, #2E72BC 0%, #D10021 100%);
+    border: 2px solid #AADB56;
+    &:after {
+      content: "\e910";
+      font-family: 'icomoon';
+    }
+  }
+  & .tasmania {
+    background: linear-gradient(106.04deg, #2230A6 0%, #528957 100%);
+    &:after {
+      content: "\e915";
+      font-family: 'icomoon';
+    }
+  }
+  & .quensland {
+    background: linear-gradient(105.75deg, #F4DC06 0%, #090909 100%);
+    &:after {
+      content: "\e913";
+      font-family: 'icomoon';
+    }
+  }
+  & .newZealand {
+    background: linear-gradient(104.35deg, #D7D7D7 0%, #000000 100%);
+    &:after {
+      content: "\e90b";
+      font-family: 'icomoon';
+    }
+  }
+}
+

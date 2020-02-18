@@ -463,6 +463,11 @@ table {
   color: #cedd79;
 }
 
+.icon-newzealand:before {
+  content: "\e90b";
+  color: #fff;
+}
+
 .icon-icon-phone:before {
   content: "\e911";
   background: #D5BF4F;
@@ -1064,66 +1069,6 @@ table {
   margin-bottom: 10px;
 }
 
-.custom-select {
-  position: relative;
-}
-
-.custom-select select {
-  display: none;
-  /*hide original SELECT element:*/
-}
-
-.select-selected {
-  background-color: DodgerBlue;
-}
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div, .select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-.select-items div:first-child {
-  background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
 .breadcrumb .kama_breadcrumbs {
   display: flex;
   flex-wrap: wrap;
@@ -1155,6 +1100,127 @@ table {
   font-size: 14px;
   line-height: 19px;
   display: block;
+}
+
+.custom-select {
+  position: relative;
+  width: 218px;
+}
+
+.custom-select select {
+  display: none;
+}
+
+/*style the arrow inside the select element:*/
+/*point the arrow upwards when the select box is open (active):*/
+/*style the items (options), including the selected item:*/
+.select-items div, .select-selected {
+  color: #ffffff;
+  padding: 9px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-items div {
+  border-radius: 100px;
+  margin-bottom: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select-items div:after {
+  padding-left: 10px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.custom-select > div:first-of-type {
+  border-radius: 4px;
+  padding: 9px 24px 9px 20px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.custom-select > div:first-of-type:before {
+  position: absolute;
+  content: "\e902";
+  font-family: 'icomoon';
+  display: block;
+  right: 18px;
+  top: calc(50% - 8px);
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.custom-select > div:first-of-type:after {
+  padding-left: 10px;
+}
+
+.custom-select > div:first-of-type.select-arrow-active:before {
+  transform: rotate(-180deg);
+}
+
+.custom-select .select-selected, .custom-select .victoria {
+  background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
+  margin-top: 5px;
+}
+
+.custom-select .select-selected:after, .custom-select .victoria:after {
+  content: "\e91a";
+  font-family: 'icomoon';
+}
+
+.custom-select .nsw {
+  background: linear-gradient(101.41deg, #2E72BC 0%, #D10021 100%);
+  border: 2px solid #AADB56;
+}
+
+.custom-select .nsw:after {
+  content: "\e910";
+  font-family: 'icomoon';
+}
+
+.custom-select .tasmania {
+  background: linear-gradient(106.04deg, #2230A6 0%, #528957 100%);
+}
+
+.custom-select .tasmania:after {
+  content: "\e915";
+  font-family: 'icomoon';
+}
+
+.custom-select .quensland {
+  background: linear-gradient(105.75deg, #F4DC06 0%, #090909 100%);
+}
+
+.custom-select .quensland:after {
+  content: "\e913";
+  font-family: 'icomoon';
+}
+
+.custom-select .newZealand {
+  background: linear-gradient(104.35deg, #D7D7D7 0%, #000000 100%);
+}
+
+.custom-select .newZealand:after {
+  content: "\e90b";
+  font-family: 'icomoon';
 }
 
 .container {
@@ -3707,6 +3773,6 @@ html.fp-enabled,
 }
 
 .filters {
-  margin: 100px 0 200px 0;
+  margin: 100px 0 300px 0;
 }
 /*# sourceMappingURL=main.css.map */
