@@ -172,39 +172,132 @@
           filters
         </div>
       </div>
-      <div class="row m-row filter-wrapper">
+      <div class="row filter-wrapper">
         <form action="">
           <div class="filter-container">
             <div class="custom-select">
               <select>
                 <option value="0">Victoria</option>
-                <option value="1" class="victoria">Victoria</option>
-                <option value="2" class="nsw">New South Wales</option>
-                <option value="3" class="tasmania">Tasmania</option>
-                <option value="4" class="quensland">Quensland</option>
-                <option value="5" class="newZealand">New Zealand</option>
+                <option value="1">Victoria</option>
+                <option value="2">New South Wales</option>
+                <option value="3">Tasmania</option>
+                <option value="4">Quensland</option>
+                <option value="5">New Zealand</option>
               </select>
             </div>
-            <div class="filter__list">
-              Departs
+            <div class="filter__item">
+              <span>Departs</span>
+              <i class="icon-icon-arrow"></i>
+              <div class="filter__list">
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_departs_1" value="Melbourne Suburbs" id="filter-departs-1">
+                  <label for="filter-departs-1">Melbourne Suburbs</label>
+                </div>
+              </div>
             </div>
-            <div class="filter__list">
-              Destination
+            <div class="filter__item">
+              <span>Destination</span>
+              <i class="icon-icon-arrow"></i>
+              <div class="filter__list">
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_destination_1" value="Melbourne Suburbs"
+                    id="filter-destination-1">
+                  <label for="filter-destination-1">Melbourne Suburbs</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_destination_2" value="Yarra Valley" id="filter-destination-2">
+                  <label for="filter-destination-2">Yarra Valley</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_destination_3" value="Mornington" id="filter-destination-3">
+                  <label for="filter-destination-3">Mornington</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_destination_4" value="Shirts" id="filter-destination-4">
+                  <label for="filter-destination-4">Shirts</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_destination_5" value="Drinking Tools" id="filter-destination-5">
+                  <label for="filter-destination-5">Drinking Tools</label>
+                </div>
+              </div>
             </div>
-            <div class="filter__list">
-              Type of drinks
+            <div class="filter__item">
+              <span>Type of drinks</span>
+              <i class="icon-icon-arrow"></i>
+              <div class="filter__list">
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_drinks_1" value="Melbourne Suburbs" id="filter-drinks-1">
+                  <label for="filter-drinks-1">Beer</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_drinks_2" value="Cider" id="filter-drinks-2">
+                  <label for="filter-drinks-2">Cider</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_drinks_3" value="Spirits" id="filter-drinks-3">
+                  <label for="filter-drinks-3">Spirits</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_drinks_4" value="Wine" id="filter-drinks-4">
+                  <label for="filter-drinks-4">Wine</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_drinks_5" value="Coffee" id="filter-drinks-5">
+                  <label for="filter-drinks-5">Coffee</label>
+                </div>
+              </div>
             </div>
-            <div class="filter__list">
-              Price
+            <div class="filter__item">
+              <span>Price</span>
+              <i class="icon-icon-arrow"></i>
+              <div class="filter__list">
+                <div class="form-radio">
+                  <input type="radio" name="filter_price" value="Up to 100" id="filter-price-1">
+                  <label for="filter-price-1">Up to 100</label>
+                </div>
+                <div class="form-radio">
+                  <input type="radio" name="filter_price" value="Up to 150" id="filter-price-2">
+                  <label for="filter-price-2">Up to 150</label>
+                </div>
+                <div class="form-radio">
+                  <input type="radio" name="filter_price" value="Any" id="filter-price-3">
+                  <label for="filter-price-3">Any</label>
+                </div>
+                <div class="form-radio">
+                  <input type="radio" name="filter_price" value="Sale" id="filter-price-4">
+                  <label for="filter-price-4">Sale</label>
+                </div>
+              </div>
             </div>
-            <div class="filter__list">
-              Day of a week
+            <div class="filter__item">
+              <span>Day of a week</span>
+              <i class="icon-icon-arrow"></i>
+              <div class="filter__list">
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_day_1" value="Monday" id="filter-day-1">
+                  <label for="filter-day-1">Monday</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_day_2" value="Tuesday" id="filter-day-2">
+                  <label for="filter-day-2">Tuesday</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_day_3" value="Wednesday" id="filter-day-3">
+                  <label for="filter-day-3">Wednesday</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_day_4" value="Thursday" id="filter-day-4">
+                  <label for="filter-day-4">Thursday</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="filter_day_5" value="Friday" id="filter-day-5">
+                  <label for="filter-day-5">Thursday</label>
+                </div>
+              </div>
             </div>
-           
-              <input type="submit" value="SEARCH">
-          
+            <input type="submit" value="SEARCH">
           </div>
-
         </form>
       </div>
     </div>

@@ -4,31 +4,13 @@
 .custom-select {
   position: relative;
   min-width: 218px;
-  // width: 100%;
+  cursor: pointer;
 }
 
 .custom-select select {
   display: none; 
 }
 
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  // position: absolute;
-  // content: "\e902";
-  // font-family: 'icomoon';
-  // display: block;
-  // right: 18px;
-  // top: calc(50% - 8px);
-  // @include transition(.3);
-}
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:before {
-  // transform: rotate(-180deg);
-}
-
-/*style the items (options), including the selected item:*/
 .select-items div,.select-selected {
   color: #ffffff;
   padding: 9px 24px;
@@ -36,7 +18,6 @@
   user-select: none;
 }
 
-/*style items (options):*/
 .select-items {
   position: absolute;
   top: 110%;
@@ -55,9 +36,7 @@
   }
 }
 
-/*hide the items when the select box is closed:*/
 .select-hide {
-  // display: none;
   opacity: 0;
   visibility: visible;
 }
@@ -91,7 +70,6 @@
   }
   & .select-selected, .victoria {
     background: linear-gradient(106.66deg, #95BB54 0%, #AEE057 100%);
-    // margin-top: 5px;
     &:after {
       content: "\e91a";
       font-family: 'icomoon';

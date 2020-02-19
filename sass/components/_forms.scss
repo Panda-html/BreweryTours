@@ -1,0 +1,77 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+
+.form-checkbox, .form-radio {
+  position: relative;
+  cursor: pointer;
+  & label {
+    font-size: 18px;
+    line-height: 27px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 11px 16px;
+    &:before {
+      position: absolute;
+      right: 10px;
+      color: #E1E1E1;
+      border: 2px solid $whiteColor;
+      @include transition(.3);
+    }
+    &:after {
+      @include transition(.3);
+    }
+  }
+  & input {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.form-checkbox {
+  & label {
+    &:before {
+      content: "\e90d";
+      font-family: 'icomoon' !important;
+    }
+  }
+  & input {
+    &:checked ~ label {
+      &:before {
+        content: "\e90c";
+        color: $greenColor;
+      }
+    }
+  }
+}
+
+.form-radio {
+  & label {
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      border: 3px solid #e1e1e1;
+      background: #fff;
+      border-radius: 100px;
+    }
+  }
+  & input {
+    &:checked ~ label {
+      &:before {
+        color: $greenColor;
+        border: 3px solid $greenColor;
+      }
+      &:after {
+        content: '';
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: 14.5px;
+        background: $greenColor;
+        border-radius: 100%;
+      }
+    }
+  }
+}

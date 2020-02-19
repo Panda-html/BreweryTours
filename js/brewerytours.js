@@ -72,6 +72,9 @@ let front = {
           this.fixedButton.removeClass('active');
       }
   },
+//   toggleFilter: function() {
+//     this.find('.filter__list').addClass('show');
+//   },
   navMouseOver: function () {
       $(".primary-navigation .menu-item-has-children").hover(function () {
           $("body").addClass('BackDropped');
@@ -139,6 +142,11 @@ let front = {
       $(document).on('click', '.wrapper-more', function () {
           self.toggleBtn();
       });
+      $(document).on('click', '.filter__item', function () {
+        // self.toggleFilter();
+        $(this).find('.filter__list').toggleClass('show');
+        $(this).find('.icon-icon-arrow').toggleClass('show');
+    });
 
       $(document).on('click', '.coupon-btn', function () {
           self.copyText();

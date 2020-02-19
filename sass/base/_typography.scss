@@ -73,6 +73,15 @@
   @include fontSize(12, 16);
   line-height: 1.6;
 }
+
+.icon-icon-checked:before {
+  content: "\e90c";
+  color: #95bb54;
+}
+.icon-icon-uncheked:before {
+  content: "\e90d";
+  color: #e1e1e1;
+}
 .icon-twitter:before {
   content: "\e907";
   color: #03a9f4;
