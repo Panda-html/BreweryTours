@@ -3,6 +3,9 @@
 
 .filter {
   margin: 16px 0 36px 0;
+  @media (max-width: $breakpoint-xl) {
+    display: none;
+  }
   &-wrapper {
     padding: 0 15px;
     & > form {
@@ -28,6 +31,9 @@
     justify-content: space-between;
     cursor: pointer;
     z-index: 19;
+    @media (max-width: 1300px) {
+      padding: 11px;
+    }
     & .form-checkbox, & .form-radio {
       border-bottom: 1px solid $greenColor;
       &:last-child {
@@ -97,7 +103,7 @@
     &__title {
       font-weight: 600;
       @include fontSize(24, 28);
-      line-height: 38px;
+      line-height: 1.35;
       margin-bottom: 12px;
     }
     &__info {
@@ -123,6 +129,7 @@
     &__price {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       margin-bottom: 16px;
       &--amount {
         margin-right: 12px;

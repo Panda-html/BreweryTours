@@ -1055,9 +1055,25 @@ table {
   height: 417px;
 }
 
+@media (max-width: 767px) {
+  .first-screen {
+    height: 234px;
+  }
+  .first-screen > .container {
+    padding: 0;
+  }
+}
+
 .first-screen__background {
   position: absolute;
   z-index: -1;
+  height: 417px;
+}
+
+@media (max-width: 767px) {
+  .first-screen__background {
+    height: 234px;
+  }
 }
 
 .first-screen__background:before {
@@ -1071,8 +1087,24 @@ table {
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .first-screen__background:before {
+    border-radius: 0;
+  }
+}
+
 .first-screen__background img {
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .first-screen__background img {
+    border-radius: 0;
+  }
 }
 
 .first-screen__content {
@@ -1102,6 +1134,13 @@ table {
 
 .badge-package {
   background: #DFDFDF;
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    position: absolute;
+    top: 95px;
+  }
 }
 
 .breadcrumb .kama_breadcrumbs {
@@ -1340,7 +1379,7 @@ table {
 
 @media (max-width: 767px) {
   .seo {
-    margin: 0;
+    margin: 24px 0 32px 0;
   }
 }
 
@@ -4001,6 +4040,12 @@ html.fp-enabled,
   margin: 16px 0 36px 0;
 }
 
+@media (max-width: 1200px) {
+  .filter {
+    display: none;
+  }
+}
+
 .filter-wrapper {
   padding: 0 15px;
 }
@@ -4030,6 +4075,12 @@ html.fp-enabled,
   justify-content: space-between;
   cursor: pointer;
   z-index: 19;
+}
+
+@media (max-width: 1300px) {
+  .filter__item {
+    padding: 11px;
+  }
 }
 
 .filter__item .form-checkbox, .filter__item .form-radio {
@@ -4111,7 +4162,7 @@ html.fp-enabled,
   font-size: -webkit-calc(24px + (28 - 24) * ((100vw - 300px) / (1900 - 300)));
   font-size: -moz-calc(24px + (28 - 24) * ((100vw - 300px) / (1900 - 300)));
   font-size: calc(24px + (28 - 24) * ((100vw - 300px) / (1900 - 300)));
-  line-height: 38px;
+  line-height: 1.35;
   margin-bottom: 12px;
 }
 
@@ -4141,6 +4192,7 @@ html.fp-enabled,
 .tour .card__price {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 

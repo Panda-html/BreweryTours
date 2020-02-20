@@ -4,7 +4,7 @@
 .seo {
   margin: 48px 0 64px 0;
   @media (max-width: $breakpoint-md) {
-    margin: 0;
+    margin: 24px 0 32px 0;
   }
   &-component {
     & h1 {
