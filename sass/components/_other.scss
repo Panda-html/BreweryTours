@@ -32,3 +32,19 @@
   }
 }
 
+.badge {
+  color: $whiteColor;
+  display: block;
+  padding: 0 12px;
+  border-radius: 100px;
+  margin: 0 4px;
+  &-sale {
+    background: #C9554E;;
+  }
+  &-special {
+    background: $greenColor;
+  }
+  &-package {
+    background: #DFDFDF;
+  }
+}

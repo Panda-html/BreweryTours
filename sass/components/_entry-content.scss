@@ -62,14 +62,12 @@
   }
 
   & a {
-    // color: $darkYellowColor;
     position: relative;
     font-size: 16px;
     line-height: 24px;
     &:after {
       content: "";
       position: absolute;
-      // background: $darkBrownColor;
       height: 1px;
       bottom: -3px;
       left: 0;

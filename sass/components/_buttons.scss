@@ -34,6 +34,7 @@
     //   background: #6D9E18;
     // }
   }
+
   &-book {
     line-height: 1;
     color: #fff;
@@ -99,6 +100,10 @@
     &:hover {
       background: $greenHoverColor;
     }
+  }
+  &-gradient {
+    background: linear-gradient(125.89deg, #95BB54 0%, #AEE057 100%);
+    border-radius: 100px;
   }
 }
 
