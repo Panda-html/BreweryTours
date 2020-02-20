@@ -4138,6 +4138,14 @@ html.fp-enabled,
   font-size: 16px;
   line-height: 22px;
   color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.filter input[type=submit]:hover {
+  background: #6D9E18;
 }
 
 .tour .card__item {
