@@ -184,6 +184,10 @@
       </div>
     </div>
   </section>
+  <div class="filter-button--mobile align-middle">
+    Use Filters
+    <i class="icon-icon-filter"></i>
+  </div>
   <section class="filter">
     <div class="container">
       <div class="row">
@@ -194,6 +198,9 @@
       <div class="row filter-wrapper">
         <form action="">
           <div class="filter-container">
+            <div class="filter-close">
+              <span></span>
+            </div>
             <div class="custom-select">
               <select>
                 <option value="0">Victoria</option>
@@ -203,6 +210,31 @@
                 <option value="4">Quensland</option>
                 <option value="5">New Zealand</option>
               </select>
+            </div>
+            <div class="filter__item custom-select__mobile">
+              <span>State</span>
+              <div class="filter__list">
+                <div class="form-radio victoria">
+                  <input type="radio" name="filter_state" value="Victoria" id="filter-state-1">
+                  <label for="filter-state-1">Victoria</label>
+                </div>
+                <div class="form-radio nsw">
+                  <input type="radio" name="filter_state" value="New South Wales" id="filter-state-2">
+                  <label for="filter-state-2">New South Wales</label>
+                </div>
+                <div class="form-radio tasmania">
+                  <input type="radio" name="filter_state" value="Tasmania" id="filter-state-3">
+                  <label for="filter-state-3">Tasmania</label>
+                </div>
+                <div class="form-radio quensland">
+                  <input type="radio" name="filter_state" value="Quensland" id="filter-state-4">
+                  <label for="filter-state-4">Quensland</label>
+                </div>
+                <div class="form-radio newZealand">
+                  <input type="radio" name="filter_state" value="New Zealand" id="filter-state-5">
+                  <label for="filter-state-5">New Zealand</label>
+                </div>
+              </div>   
             </div>
             <div class="filter__item">
               <span>Departs</span>
@@ -320,6 +352,7 @@
         </form>
       </div>
     </div>
+    
   </section>
   <section class="tour">
     <div class="container">

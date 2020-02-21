@@ -5,6 +5,8 @@ let front = {
   cart: $('.header-cart'),
   fixedButton: $('.wrapper-more'),  
   submenu: $('.submenu'),
+  filter: $('.filter'),
+  closeFilter: $('.filter-close'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -70,6 +72,18 @@ let front = {
           this.fixedButton.addClass('active');
       } else {
           this.fixedButton.removeClass('active');
+      }
+  },
+  openFilter: function() {
+    if(!this.filter.hasClass('open')) {
+        this.filter.addClass('open')
+    } else {
+        this.filterBtn.removeClass('open');
+    }
+  },
+  closeFilter: function() {
+      if(this.filter.hasClass('open')) {
+          this.filter.removeClass('open');
       }
   },
 //   toggleFilter: function() {
@@ -143,11 +157,15 @@ let front = {
           self.toggleBtn();
       });
       $(document).on('click', '.filter__item', function () {
-        // self.toggleFilter();
         $(this).find('.filter__list').toggleClass('show');
         $(this).find('.icon-icon-arrow').toggleClass('show');
     });
-
+    $(document).on('click', '.filter-button--mobile', function () {
+        self.openFilter();
+    });
+    $(document).on('click', '.filter-close', function () {
+        self.closeFilter();
+    });
       $(document).on('click', '.coupon-btn', function () {
           self.copyText();
       });

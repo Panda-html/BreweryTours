@@ -379,6 +379,14 @@ table {
   line-height: 1.6;
 }
 
+.icon-checkbox-checked:before {
+  content: "\e90e";
+}
+
+.icon-checkbox-mobile:before {
+  content: "\e917";
+}
+
 .icon-icon-checked:before {
   content: "\e90c";
   color: #95bb54;
@@ -475,6 +483,11 @@ table {
 
 .icon-newzealand:before {
   content: "\e90b";
+  color: #fff;
+}
+
+.icon-icon-filter:before {
+  content: "\e90f";
   color: #fff;
 }
 
@@ -1182,6 +1195,12 @@ table {
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .custom-select {
+    display: none;
+  }
+}
+
 .custom-select select {
   display: none;
 }
@@ -1313,6 +1332,12 @@ table {
   align-items: center;
   padding: 11px 16px;
   background: #ffffff;
+}
+
+@media (max-width: 1200px) {
+  .form-checkbox label, .form-radio label {
+    padding: 0;
+  }
 }
 
 .form-checkbox label:before, .form-radio label:before {
@@ -4040,14 +4065,51 @@ html.fp-enabled,
   margin: 16px 0 36px 0;
 }
 
+.filter.open {
+  left: 0;
+}
+
 @media (max-width: 1200px) {
   .filter {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    top: 80px;
+    width: 35%;
+    left: -120%;
+    background: #fff;
+    position: fixed;
+    z-index: 99;
+    overflow-y: auto;
+    height: 100%;
+    padding: 8px 0;
+    margin: 0;
+    box-shadow: 4px 0px 8px rgba(203, 203, 203, 0.25);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .filter > .container {
+    max-width: unset;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .filter {
+    width: 100%;
   }
 }
 
 .filter-wrapper {
   padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+  .filter-wrapper {
+    padding: 0;
+  }
 }
 
 .filter-wrapper > form {
@@ -4058,9 +4120,22 @@ html.fp-enabled,
   margin-bottom: 16px;
 }
 
+@media (max-width: 1200px) {
+  .filter-heading {
+    display: none;
+  }
+}
+
 .filter-container {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .filter-container {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
 }
 
 .filter__item {
@@ -4083,12 +4158,71 @@ html.fp-enabled,
   }
 }
 
+@media (max-width: 1200px) {
+  .filter__item {
+    border: none;
+    padding: 0 15px;
+    align-items: flex-start;
+    flex-direction: column;
+    border-bottom: 1px solid #C4C4C4;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter__item:last-of-type {
+    border: none;
+  }
+}
+
 .filter__item .form-checkbox, .filter__item .form-radio {
   border-bottom: 1px solid #95BB54;
 }
 
+@media (max-width: 1200px) {
+  .filter__item .form-checkbox, .filter__item .form-radio {
+    margin-bottom: 12px;
+    border: none;
+  }
+  .filter__item .form-checkbox label:before, .filter__item .form-radio label:before {
+    position: static;
+    margin-right: 12px;
+  }
+}
+
 .filter__item .form-checkbox:last-child, .filter__item .form-radio:last-child {
   border: none;
+}
+
+@media (max-width: 1200px) {
+  .filter__item .form-checkbox label:before {
+    content: "\e917";
+  }
+  .filter__item .form-checkbox input:checked ~ label:before {
+    content: "\e90e";
+    color: #333;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter__item .form-radio label:before {
+    border: 3px solid #333333;
+  }
+  .filter__item .form-radio input:checked ~ label:before {
+    border: 3px solid #333333;
+    color: #333;
+  }
+  .filter__item .form-radio input:checked ~ label:after {
+    left: 5px;
+    background: #333333;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter__item i {
+    display: none;
+  }
 }
 
 .filter__item i:before {
@@ -4101,6 +4235,26 @@ html.fp-enabled,
 
 .filter__item i.show:before {
   transform: rotate(-180deg);
+}
+
+.filter__item.custom-select__mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .filter__item.custom-select__mobile {
+    display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filter__item span {
+    display: block;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    margin: 16px 0;
+  }
 }
 
 .filter__list {
@@ -4120,9 +4274,53 @@ html.fp-enabled,
   transition: all 0.3s ease-out;
 }
 
+@media (max-width: 1200px) {
+  .filter__list {
+    position: static;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .filter__list.show {
   opacity: 1;
   visibility: visible;
+}
+
+.filter__list .form-radio {
+  display: flex;
+}
+
+.filter__list .form-radio:after {
+  font-family: 'icomoon';
+  font-size: 30px;
+  padding-left: 20px;
+}
+
+.filter__list .victoria:after {
+  content: "\e91a";
+  color: #fff79d;
+}
+
+.filter__list .nsw:after {
+  content: "\e910";
+  color: #cedd79;
+}
+
+.filter__list .tasmania:after {
+  content: "\e915";
+  color: #dfbccd;
+}
+
+.filter__list .quensland:after {
+  content: "\e913";
+  color: #b4afcd;
+}
+
+.filter__list .newZealand:after {
+  content: "\e90b";
+  color: #333;
 }
 
 .filter input[type=submit] {
@@ -4146,6 +4344,74 @@ html.fp-enabled,
 
 .filter input[type=submit]:hover {
   background: #6D9E18;
+}
+
+@media (max-width: 1200px) {
+  .filter input[type=submit] {
+    width: 178px;
+    margin-right: auto;
+    margin-top: 8px;
+  }
+}
+
+.filter-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 16px;
+  top: 24px;
+  z-index: 49;
+  cursor: pointer;
+}
+
+.filter-close span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.filter-close span:before, .filter-close span:after {
+  content: '';
+  background: #000;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: rotate(45deg);
+  border-radius: 100px;
+}
+
+.filter-close span:after {
+  transform: rotate(135deg);
+}
+
+.filter-button--mobile {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 185px;
+  background: #95BB54;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 3px 0px 0px 3px;
+  padding: 3px 12px;
+  cursor: pointer;
+  z-index: 29;
+}
+
+@media (max-width: 1200px) {
+  .filter-button--mobile {
+    display: flex;
+  }
+}
+
+.filter-button--mobile i {
+  font-size: 16px;
+  padding-left: 6px;
 }
 
 .tour .card__item {

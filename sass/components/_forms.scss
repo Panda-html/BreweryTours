@@ -13,6 +13,9 @@
     align-items: center;
     padding: 11px 16px;
     background: $whiteColor;
+    @media (max-width: $breakpoint-xl) {
+      padding: 0;
+    }
     &:before {
       position: absolute;
       right: 10px;

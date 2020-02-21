@@ -73,7 +73,13 @@
   @include fontSize(12, 16);
   line-height: 1.6;
 }
+.icon-checkbox-checked:before {
+  content: "\e90e";
+}
 
+.icon-checkbox-mobile:before {
+  content: "\e917";
+}
 .icon-icon-checked:before {
   content: "\e90c";
   color: #95bb54;
@@ -155,6 +161,11 @@
   content: "\e90b";
   color: #fff;
 }
+.icon-icon-filter:before {
+  content: "\e90f";
+  color: #fff;
+}
+
 .icon-icon-phone:before {
   content: "\e911";
   background: #D5BF4F;
