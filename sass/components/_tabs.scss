@@ -1,0 +1,63 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.tabs {
+  &-list {
+    margin-bottom: 12px;
+    &__item {
+      &_link {
+        line-height: 22px;
+        font-weight: normal;
+        @include transition(0.3);
+        font-size: 16px;
+        color: $blackColor;
+        &.active {
+          color: $greenColor;
+        }
+      }
+    }
+  }
+
+  &-wrap {
+    .tab-content {
+      display: none;
+      animation: fadeEffect .5s;
+      -webkit-animation: fadeEffect .5s;
+      &.is-show {
+        display: block;
+      }
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    // height: 0;
+    opacity: 0;
+  }
+  to {
+    // height: 100%;
+    opacity: 1;
+  }
+}
+
+.mob-tab {
+  display: none;
+  @media (max-width: $breakpoint-lg) {
+    display: block;
+  }
+}
+
+.main-tabs {
+  @media (max-width: $breakpoint-lg) {
+    & .tabs-list__item {
+      width: 50%;
+      & a {
+        display: block;
+      }
+    }
+  }
+}

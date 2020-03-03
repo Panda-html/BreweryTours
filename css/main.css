@@ -1512,6 +1512,67 @@ table {
   font-weight: 600;
 }
 
+.tabs-list {
+  margin-bottom: 12px;
+}
+
+.tabs-list__item_link {
+  line-height: 22px;
+  font-weight: normal;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  font-size: 16px;
+  color: #000000;
+}
+
+.tabs-list__item_link.active {
+  color: #95BB54;
+}
+
+.tabs-wrap .tab-content {
+  display: none;
+  animation: fadeEffect .5s;
+  -webkit-animation: fadeEffect .5s;
+}
+
+.tabs-wrap .tab-content.is-show {
+  display: block;
+}
+
+.tabs-wrap .tab-content.active {
+  display: block;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mob-tab {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mob-tab {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-tabs .tabs-list__item {
+    width: 50%;
+  }
+  .main-tabs .tabs-list__item a {
+    display: block;
+  }
+}
+
 .container {
   max-width: 1320px;
   margin: auto;
@@ -4600,5 +4661,162 @@ html.fp-enabled,
   .create-tour {
     padding-top: 24px;
   }
+}
+
+.tours-detailed {
+  padding-top: 24px;
+}
+
+@media (max-width: 991px) {
+  .tours-detailed .tabs {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .tours-detailed .tabs .column:nth-child(1) {
+    order: 2;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .tours-detailed .tabs .column:nth-child(2) {
+    order: 1;
+  }
+  .tours-detailed .tabs .column:nth-child(3) {
+    order: 3;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.tours-detailed .tabs-list {
+  padding: 24px;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .tours-detailed .tabs-list {
+    padding: 12px;
+  }
+}
+
+.tours-detailed .tabs-list__item {
+  margin-bottom: 13px;
+}
+
+.tours-detailed .tabs-list__item_link {
+  position: relative;
+}
+
+.tours-detailed .tabs-list__item_link.active:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background: #95BB54;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.tours-detailed .tabs-list__item_link.active:hover:before {
+  width: 0;
+}
+
+.tours-detailed__book {
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #DADADA;
+  border-radius: 10px;
+}
+
+.tours-detailed__book--container {
+  padding: 24px 24px 0 24px;
+}
+
+@media (max-width: 1200px) {
+  .tours-detailed__book--container {
+    padding: 12px 12px 0 12px;
+  }
+}
+
+.tours-detailed__book--title {
+  margin-bottom: 12px;
+}
+
+.tours-detailed__book--item {
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.tours-detailed__book--item span {
+  color: #A2A2A2;
+}
+
+.tours-detailed__book--item p {
+  padding-left: 4px;
+}
+
+.tours-detailed__book--item img {
+  width: 80px;
+  padding-left: 4px;
+}
+
+.tours-detailed__book--price {
+  margin: 20px 0 13px 0;
+}
+
+.tours-detailed__book .btn-book {
+  width: 100%;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 18px 18px;
+}
+
+.tours-detailed__book .btn-book:after, .tours-detailed__book .btn-book:before {
+  width: calc(98% + 20px);
+}
+
+.tours-detailed__book .btn-book:hover:before, .tours-detailed__book .btn-book:hover:after {
+  width: calc(101% + 21px);
+}
+
+.tours-detailed__book .btn-book:hover:before {
+  left: calc(-1% - 10px);
+}
+
+.tours-detailed-top-widget {
+  width: 294px;
+  height: 28px;
+  margin: -35px 0 12px 0;
+}
+
+@media (max-width: 991px) {
+  .tours-detailed-top-widget {
+    margin: 0 0 12px 0;
+  }
+}
+
+.tours-detailed-sidebar-widget {
+  padding-top: 16px;
+}
+
+.tours-detailed-bottom-widget {
+  text-align: center;
+}
+
+.tours-detailed-bottom-widget img {
+  margin: 0 auto;
+}
+
+.tours-detailed-bottom-widget a {
+  display: block;
+  margin: 16px 0 24px 0;
 }
 /*# sourceMappingURL=main.css.map */
