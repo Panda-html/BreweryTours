@@ -132,13 +132,20 @@ let front = {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
+        tabcontent[i].style.display = "none";
+        // tabcontent[i].style.fadeIn('fast');
+    //   tabcontent[i].setAttribute("style", "height: 0; opacity: 0; visibility: hidden;")
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-    document.getElementById(tabName).style.display = "flex";
+    document.getElementById(tabName).style.display = "block";
+    // document.getElementById(tabName).fadeOut('fast');
+    
+    // document.getElementById(tabName).setAttribute("style", "height: 100%; opacity: 1; visibility: visible")
+    // document.getElementById(tabName).style.height = "100%";
+    // document.getElementById(tabName).addClass = "1";
     el.currentTarget.className += " active";
   },
 

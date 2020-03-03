@@ -1,6 +1,8 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+// Tours Public
+
 .filter {
   margin: 16px 0 36px 0;
   &.open {
@@ -373,3 +375,49 @@
   }
 }
 
+
+.custom-select--display {
+  display: none;
+  // pointer-events: none;
+  // width: fit-content;
+  max-width: 250px;
+  margin: 0 auto 24px auto; 
+  & > div:first-of-type {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 11px 20px;
+    justify-content: center;
+    &:before {
+      display: none!important;
+    }
+  }
+  @media (max-width: $breakpoint-xl) {
+    display: block;
+  }
+}
+
+
+
+
+// Tours private
+
+.app-section-3.--private {
+  height: 100%;
+  @media (max-width: $breakpoint-md) {
+    height: auto;
+    padding-top: 0;
+  }
+  & .home-images {
+    left: 15px;
+    top: 24px;
+    @media (max-width: $breakpoint-md) {
+      padding-top: 0;
+    }
+  }
+}
+
+.create-tour {
+  @media (max-width: $breakpoint-md) {
+    padding-top: 24px;
+  }
+}

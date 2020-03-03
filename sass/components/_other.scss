@@ -2,7 +2,7 @@
 @import "../abstracts/variables";
 
 .first-screen {
-  margin: 48px 0 24px;
+  margin: 48px 0 24px 0;
   position: relative;
   height: 417px;
   @media (max-width: $breakpoint-md) {

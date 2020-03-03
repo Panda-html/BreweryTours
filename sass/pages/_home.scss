@@ -230,12 +230,26 @@ section.section {
   }
 }
 
+.home-tabs {
+  // height: ;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  @media (max-width: $breakpoint-md) {
+    height: unset;
+  }
+}
+
 .tabcontent {
+  -webkit-animation: fade-in 1s;
+  animation: fade-in 1s;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  &:first-of-type {
+    display: block;
+  }
   & .app-screen__title {
     width: 100%;
   }
@@ -392,6 +406,8 @@ section.section {
         }
         & .text-bottom {
           opacity: 1;
+          // transition-delay: 0.3s;
+          margin-bottom: 0;
         }
       }
       @media (max-width: $breakpoint-xl) {
@@ -401,21 +417,6 @@ section.section {
         width: 100%;
         height: 320px;
       }
-      // &:nth-child(1) {
-      //   @media (max-width: $breakpoint-md) {
-      //     border-radius: 0;
-      //   }
-      // }
-      // &:nth-child(2) {
-      //   @media (max-width: $breakpoint-md) {
-      //     border-radius: 0;
-      //   }
-      // }
-      // &:nth-child(3) {
-      //   @media (max-width: $breakpoint-md) {
-      //     border-radius: 0;
-      //   }
-      // }
       & img {
         display: block;
         width: 100%;
@@ -465,9 +466,11 @@ section.section {
     & .text-bottom {
       position: absolute;
       bottom: 0;
+      margin-bottom: -100%;
       padding: 15px;
       opacity: 0;
       @include transition(.3);
+      
       @media (max-width: $breakpoint-xl) {
         opacity: 1;
       }
