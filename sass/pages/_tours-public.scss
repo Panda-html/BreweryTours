@@ -179,11 +179,20 @@
     visibility: hidden;
     overflow: hidden;
     @include transition(.3);
+    background: $whiteColor;
     @media (max-width: $breakpoint-xl) {
       position: static;
       border: none;
       opacity: 1;
       visibility: visible;
+    }
+    & .form-checkbox, & .form-radio {
+      & label {
+        padding-right: 33px;
+        @media (max-width: $breakpoint-xl) {
+          padding: 0;
+        }
+      }
     }
     &.show {
       opacity: 1;

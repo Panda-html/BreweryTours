@@ -363,50 +363,59 @@ section.section {
 
 
 .app-section-4 {
-  &.secion {
+  &.section {
     @media (max-width: $breakpoint-grid-xl) {
       height: auto;
     }
   }
   & .home-images {
     display: flex;
+    height: 100%;
     justify-content: space-between;
     @media (max-width: $breakpoint-md) {
       flex-wrap: wrap;
     }
     & .image-item {
-      width: 28vw;
-      height: 51vh;
+      width: 33.333%;
+      height: 100%;
       position: relative;
       filter: saturate(0%);
       @include transition(.3);
       overflow: hidden;
+      &:hover {
+        width: 50%;
+        @media (max-width: $breakpoint-xl) {
+          width: 33.333%;
+        }
+        @media (max-width: $breakpoint-md) {
+          width: 100%;
+        }
+        & .text-bottom {
+          opacity: 1;
+        }
+      }
       @media (max-width: $breakpoint-xl) {
         filter: unset;
-        height: 41vh;
       }
       @media (max-width: $breakpoint-md) {
         width: 100%;
         height: 320px;
       }
-      &:nth-child(1) {
-        border-radius: 0px 10px 0px 0px;
-        @media (max-width: $breakpoint-md) {
-          border-radius: 0;
-        }
-      }
-      &:nth-child(2) {
-        border-radius: 10px 10px 0px 0px;
-        @media (max-width: $breakpoint-md) {
-          border-radius: 0;
-        }
-      }
-      &:nth-child(3) {
-        border-radius: 10px 0px 0px 0px;
-        @media (max-width: $breakpoint-md) {
-          border-radius: 0;
-        }
-      }
+      // &:nth-child(1) {
+      //   @media (max-width: $breakpoint-md) {
+      //     border-radius: 0;
+      //   }
+      // }
+      // &:nth-child(2) {
+      //   @media (max-width: $breakpoint-md) {
+      //     border-radius: 0;
+      //   }
+      // }
+      // &:nth-child(3) {
+      //   @media (max-width: $breakpoint-md) {
+      //     border-radius: 0;
+      //   }
+      // }
       & img {
         display: block;
         width: 100%;
@@ -436,17 +445,35 @@ section.section {
     }
     & .image-text {
       font-weight: bold;
-      @include fontSize(28, 48);
+      font-size: 16px;
       line-height: 1.375;
       color: $whiteColor;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+    }
+    & .text-top {
+      width: 238px;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      transform: translate(-50%, -50%)
+    }
+    & .text-bottom {
+      position: absolute;
+      bottom: 0;
+      padding: 15px;
+      opacity: 0;
+      @include transition(.3);
+      @media (max-width: $breakpoint-xl) {
+        opacity: 1;
+      }
+      @media (max-width: $breakpoint-lg) {
+        display: none;
+      }
     }
   }
 }
