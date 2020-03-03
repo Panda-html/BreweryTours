@@ -28,13 +28,16 @@ let front = {
             // normalScrollElements: 'footer',
             paddingTop: '80px',
             // normalScrollElements: '.footer',
-            slidesNavigation: false,
+            navigation: true,
+            slidesNavigation: true,
             slidesToSections: true
         });
       } else {
         null
       }
   },
+
+  
 
   newSlider: function (selector, options) {
       options = (options !== undefined) ? Object.assign({}, this.slider_options_default, options) : this.slider_options_default;
