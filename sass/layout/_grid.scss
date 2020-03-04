@@ -59,6 +59,12 @@
 //     padding: 0 15px !important;
 //   }
 // }
+.mb-55 {
+  margin-bottom: 55px;
+  @media (max-width: $breakpoint-lg) {
+    margin-bottom: 24px;
+  }
+}
 
 .p-0 {
   padding: 0 !important;

@@ -265,7 +265,17 @@ let modal = {
 jQuery(function () {
   front.init();
   modal.init();
-
+  let sidebar = document.querySelector('#sidebar') !== null;
+  if (sidebar) {
+    var stickySidebar = new StickySidebar('#sidebar', {
+        topSpacing: 120,
+        bottomSpacing: 10,
+        containerSelector: '#main-content',
+        innerWrapperSelector: '.sidebar__inner',
+        resizeSensor: true,
+        minWidth: 992
+    });
+  }
 
   // Hide Header on on scroll down
   let didScroll;
@@ -380,14 +390,10 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     null
   }
 
-  var stickySidebar = new StickySidebar('#sidebar', {
-    topSpacing: 120,
-    bottomSpacing: 10,
-    containerSelector: '#main-content',
-    innerWrapperSelector: '.sidebar__inner',
-    resizeSensor: true,
-    minWidth: 992
-});
+
+
+
+  
 //   $(document).ready(function() {
 // 	$('#pagepiling').pagepiling();
 // });

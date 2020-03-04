@@ -45,6 +45,7 @@
   }
   &__content {
     color: $whiteColor;
+    padding: 0 15px;
   }
   &__title {
     color: $whiteColor;
@@ -73,6 +74,12 @@
 
 }
 
-// #fp-nav ul li a span, .fp-slidesNav ul li a span {
-//   background: $greenColor!important;
-// }
+.first-screen--product {
+  @media (max-width: $breakpoint-md) {
+    height: 280px;
+    & .first-screen__background--product {
+      height: 280px;
+    }
+  }
+
+}

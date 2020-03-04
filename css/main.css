@@ -1150,6 +1150,7 @@ table {
 
 .first-screen__content {
   color: #ffffff;
+  padding: 0 15px;
 }
 
 .first-screen__title {
@@ -1175,6 +1176,15 @@ table {
 
 .badge-package {
   background: #DFDFDF;
+}
+
+@media (max-width: 767px) {
+  .first-screen--product {
+    height: 280px;
+  }
+  .first-screen--product .first-screen__background--product {
+    height: 280px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1641,6 +1651,16 @@ table {
 
 .w-100 {
   width: 100%;
+}
+
+.mb-55 {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 991px) {
+  .mb-55 {
+    margin-bottom: 24px;
+  }
 }
 
 .p-0 {
@@ -4265,6 +4285,37 @@ html.fp-enabled,
   }
 }
 
+.filter-container input[type=submit] {
+  padding: 11px 16px;
+  margin-left: 4px;
+  width: 100%;
+  background: #95BB54;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.filter-container input[type=submit]:hover {
+  background: #6D9E18;
+}
+
+@media (max-width: 1200px) {
+  .filter-container input[type=submit] {
+    width: 178px;
+    margin-right: auto;
+    margin-top: 8px;
+  }
+}
+
 .filter__item {
   margin: 0 4px;
   padding: 11px 16px;
@@ -4461,37 +4512,6 @@ html.fp-enabled,
   color: #333;
 }
 
-.filter input[type=submit] {
-  padding: 11px 16px;
-  margin-left: 4px;
-  width: 100%;
-  background: #95BB54;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 22px;
-  color: #ffffff;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.filter input[type=submit]:hover {
-  background: #6D9E18;
-}
-
-@media (max-width: 1200px) {
-  .filter input[type=submit] {
-    width: 178px;
-    margin-right: auto;
-    margin-top: 8px;
-  }
-}
-
 .filter-close {
   width: 30px;
   height: 30px;
@@ -4500,6 +4520,13 @@ html.fp-enabled,
   top: 24px;
   z-index: 49;
   cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .filter-close {
+    display: block;
+  }
 }
 
 .filter-close span {
@@ -4962,5 +4989,117 @@ html.fp-enabled,
 .tours-detailed-bottom-widget a {
   display: block;
   margin: 16px 0 24px 0;
+}
+
+.first-screen__content .filter-button--mobile {
+  display: none;
+  position: static;
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #95BB54;
+  color: #95BB54;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 3px;
+  padding: 8px 24px;
+  z-index: 29;
+}
+
+@media (max-width: 1200px) {
+  .first-screen__content .filter-button--mobile {
+    display: inline-block;
+  }
+}
+
+.first-screen__content .filter-button--mobile i {
+  font-size: 16px;
+  padding-left: 6px;
+}
+
+.first-screen__content .filter-button--mobile i:before {
+  color: #95BB54;
+}
+
+.filter--product {
+  padding-top: 48px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .filter--product {
+    padding-top: 0;
+  }
+}
+
+.filter--product .filter__item {
+  border-color: #fff;
+  background: #ffffff;
+  color: #000000;
+}
+
+.product__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 24px 19px;
+}
+
+@media (max-width: 991px) {
+  .product__item {
+    padding: 0;
+  }
+}
+
+.product__item--image {
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 23px auto;
+}
+
+.product__item--name {
+  margin-bottom: 8px;
+}
+
+.product__item--info {
+  margin-bottom: 4px;
+}
+
+.product__item--info .info-item {
+  margin-bottom: 4px;
+  display: flex;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.product__item--info span {
+  color: #A2A2A2;
+}
+
+.product__item--info p {
+  padding-left: 4px;
+}
+
+.product__item--price {
+  margin-bottom: 8px;
+}
+
+.product__item--btn a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+}
+
+@media (max-width: 991px) {
+  .product-more {
+    margin-top: 12px;
+  }
+}
+
+.product-more a {
+  padding: 14px 66px;
+  font-size: 16px;
 }
 /*# sourceMappingURL=main.css.map */
