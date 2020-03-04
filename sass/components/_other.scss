@@ -81,5 +81,33 @@
       height: 280px;
     }
   }
+}
 
+
+.page__heading {
+  margin: 36px 0 24px 0;
+  @media (max-width: $breakpoint-md) {
+    margin: 24px 0;
+  }
+}
+
+.info-item {
+  display: flex;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 4px;
+  & span {
+    color: #A2A2A2;
+  }
+  & p {
+    padding-left: 4px;
+  }
+  & img {
+    width: 80px;
+    padding-left: 4px;
+  }
+  & i {
+    font-size: 24px;
+    padding: 0 4px;
+  }
 }
