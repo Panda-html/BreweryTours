@@ -35,6 +35,8 @@ let front = {
       } else {
         null
       }
+
+
   },
 
   
@@ -378,6 +380,14 @@ if (window.matchMedia("(min-width: 992px)").matches) {
     null
   }
 
+  var stickySidebar = new StickySidebar('#sidebar', {
+    topSpacing: 120,
+    bottomSpacing: 10,
+    containerSelector: '#main-content',
+    innerWrapperSelector: '.sidebar__inner',
+    resizeSensor: true,
+    minWidth: 992
+});
 //   $(document).ready(function() {
 // 	$('#pagepiling').pagepiling();
 // });

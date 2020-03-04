@@ -51,13 +51,13 @@
   }
 }
 
-.main-tabs {
-  @media (max-width: $breakpoint-lg) {
-    & .tabs-list__item {
-      width: 50%;
-      & a {
-        display: block;
-      }
-    }
-  }
-}
+// .main-tabs {
+//   @media (max-width: $breakpoint-lg) {
+//     & .tabs-list__item {
+//       width: 50%;
+//       & a {
+//         display: block;
+//       }
+//     }
+//   }
+// }

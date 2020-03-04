@@ -73,6 +73,28 @@
   @include fontSize(12, 16);
   line-height: 1.6;
 }
+.icon-fri:before {
+  content: "\e918";
+}
+.icon-mon:before {
+  content: "\e91f";
+}
+.icon-sat:before {
+  content: "\e920";
+}
+.icon-sun:before {
+  content: "\e921";
+}
+.icon-thu:before {
+  content: "\e922";
+}
+.icon-tue:before {
+  content: "\e923";
+}
+.icon-wed:before {
+  content: "\e924";
+}
+
 .icon-checkbox-checked:before {
   content: "\e90e";
 }
