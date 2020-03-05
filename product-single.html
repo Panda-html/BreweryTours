@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
+<body class="no-focus-outline">
   <div class="floating-menu">
     <div class="wrapper wrapper-chat">
       <!-- <span class="tooltip">Write us</span> -->
@@ -164,6 +164,159 @@
       </div>
     </div>
   </section>
+
+  <section class="single-product">
+    <div class="container">
+      <div class="row m-row align-middle">
+        <div class="column col-md-7">
+          <div class="product-carousel d-flex">
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/product-2.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/product-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/product-single-image.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/product-1.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/product-single-image.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/product-single-image.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-container gallery-top">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-2.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-1.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-single-image.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-1.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-single-image.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-zoom-container">
+                    <img src="./img/product-single-image.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="column col-md-5">
+          <div class="product-info">
+            <div class="product__title">
+              T-Shirt Aussie Brewery Tours
+            </div>
+            <div class="product__description app-screen__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor
+            </div>
+            <div class="product__price">
+              $36
+            </div>
+            <div class="product__color">
+              <span class="product__color--heading">Color:</span>
+              <div class="color-list d-flex">
+                <div class="color-item">
+                  <label class="color-item__label">
+                    <input type="radio" class="color-item__input input-color" name="color" value="синій">
+                    <div style="background-color: #000000"></div>
+                  </label>
+                </div>
+                <div class="color-item">
+                  <label class="color-item__label">
+                    <input type="radio" class="color-item__input input-color" name="color" value="синій">
+                    <div style="background-color: #95BB54"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="product__size">
+              <span class="product__color--heading">Size:</span>
+              <div class="size-list d-flex">
+                <div class="size-item">
+                  <label class="size-item__label">
+                    <input type="radio" class="size-item__input input-color" name="size" value="XS">
+                    <div>XS</div>
+                  </label>
+                </div>
+                <div class="size-item">
+                  <label class="size-item__label">
+                    <input type="radio" class="size-item__input input-color" name="size" value="S">
+                    <div>S</div>
+                  </label>
+                </div>
+                <div class="size-item">
+                  <label class="size-item__label">
+                    <input type="radio" class="size-item__input input-color" name="size" value="M">
+                    <div>M</div>
+                  </label>
+                </div>
+                <div class="size-item">
+                  <label class="size-item__label">
+                    <input type="radio" class="size-item__input input-color" name="size" value="L">
+                    <div>L</div>
+                  </label>
+                </div>
+                <div class="size-item">
+                  <label class="size-item__label">
+                    <input type="radio" class="size-item__input input-color" name="size" value="XL">
+                    <div>XL</div>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="product__submit form-submit">
+              <input type="submit" value="ORDER">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="product-recommendation">
+    <div class="container">
+      <div class="row d-flex align-center">
+        <div class="product-recommendation__heading heading-2 --bold">
+          You may like this
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
   <footer class="footer">
     <div class="container">
       <div class="row d-flex align-center">
@@ -235,12 +388,41 @@
   </footer>
 
 
+
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
   <script src="js/libs/fullpage.js"></script>
-  <script src="js/libs/flickity.pkgd.min.js"></script>
+  <!-- <script src="js/libs/flickity.pkgd.min.js"></script> -->
+  <script src="js/libs/swiper.min.js"></script>
   <script src="js/sliders.js"></script>
   <script src="js/brewerytours.js"></script>
+
+  <script>
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 5,
+      touchRatio: 0,
+      loop: true,
+      direction: 'vertical',
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      zoom: true,
+      // touchRatio: 0,
+      loop: true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs,
+      },
+    });
+  </script>
 </body>
 
 </html>

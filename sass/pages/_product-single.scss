@@ -1,0 +1,143 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.single-product {
+  margin-bottom: 64px;
+}
+
+.swiper-container {
+  margin: 0;
+  height: 600px;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.gallery-top {
+  width: 615px;
+  margin-left: 30px;
+  background: #F0F0F0;
+}
+.gallery-thumbs {
+  width: 90px;
+  height: 600px;
+}
+.gallery-thumbs .swiper-slide {
+  width: 100%;
+  height: 110px;
+  opacity: 0.5;
+  padding: 15px 0;
+  background: #F0F0F0;
+  & img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+}
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.product {
+  &__title {
+    @include fontSize(24, 42);
+    line-height: 1.2;
+    font-weight: 600;
+    max-width: 70%;
+    margin-bottom: 12px;
+  }
+  &__description {
+    margin-bottom: 12px;
+  }
+  &__price {
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 55px;
+    margin-bottom: 16px;
+  }
+  &__color {
+    margin-bottom: 20px;
+    &--heading {
+      color: #333333;
+      margin-bottom: 8px;
+      display: block;
+    }
+    & .color-item {
+      margin: 0 18px 10px 0;
+      &__input {
+        display: none;
+        &:checked ~ div:before {
+          content: '';
+          border-width: 4px;
+          border-color: #fff;
+        }
+      }
+      &__label {
+        width: 48px;
+        height: 48px;
+        display: block;
+        border-radius: 100px;
+        overflow: hidden;
+        & div {
+          height: 100%;
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+          &:before {
+            content: '';
+            border: 1px solid transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            border-radius: 100px;
+            @include transition(.3);
+          }
+        }
+      }
+    }
+  }
+  &__size {
+    margin-bottom: 26px;
+    & .size-item {
+      margin: 0 15px 10px 0;
+      &__input {
+        display: none;
+        &:checked ~ div {
+          content: '';
+          background: $greenColor;
+          color: $whiteColor;
+        }
+      }
+      &__label {
+        & div {
+          cursor: pointer;
+          @include transition(.3);
+          background: transparent;
+          width: 68px;
+          height: 28px;
+          color: #333333;
+          border: 1px solid $greenColor;
+          border-radius: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  &__submit {
+    input {
+      font-size: 24px;
+      line-height: 33px;
+      width: auto;
+      font-weight: 600;
+      padding: 8px 56px;
+      border-radius: 100px;
+    }
+  }
+}
+

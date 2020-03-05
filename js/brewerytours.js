@@ -273,7 +273,7 @@ jQuery(function () {
         containerSelector: '#main-content',
         innerWrapperSelector: '.sidebar__inner',
         resizeSensor: true,
-        minWidth: 992
+        minWidth: 767
     });
   }
 
