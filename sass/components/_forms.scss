@@ -1,6 +1,37 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.form-control {
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.form-input {
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  padding: 13px 16px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  width: 100%;
+  @include transition(.3);
+  transition-delay: .6s;
+  &::placeholder {
+    @include transition(.3);
+    transition-delay: 1s;
+  }
+  &:focus {
+    &::placeholder {
+      color: $greenColor;
+    }
+  }
+  
+  // &:focus {
+  //   outline: 1px solid $greenColor;
+  // }
+}
 
 .form-checkbox, .form-radio {
   position: relative;
@@ -79,3 +110,37 @@
     }
   }
 }
+
+
+input[type=submit] {
+  padding: 11px 16px;
+  margin-left: 4px;
+  width: 100%;
+  background: $greenColor;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 22px;
+  color: $whiteColor;
+  @include transition(.3);
+  &:hover {
+    background: $greenHoverColor;
+  }
+}
+
+
+.form-input ~ .focus-border:before,
+.form-input ~ .focus-border:after{content: ""; position: absolute; top: 0; right: 0; width: 0; height: 2px; background-color: #95BB54; transition: 0.2s; transition-delay: 0.2s;}
+.form-input ~ .focus-border:after{top: auto; bottom: 0; right: auto; left: 0; transition-delay: 0.6s;}
+.form-input ~ .focus-border i:before,
+.form-input ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #95BB54; transition: 0.2s;}
+.form-input ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0; transition-delay: 0.4s;}
+.form-input:focus ~ .focus-border:before,
+.form-input:focus ~ .focus-border:after{width: 100%; transition: 0.2s; transition-delay: 0.6s;}
+.form-input:focus ~ .focus-border:after{transition-delay: 0.2s;}
+.form-input:focus ~ .focus-border i:before,
+.form-input:focus ~ .focus-border i:after{height: 100%; transition: 0.2s;}
+.form-input:focus ~ .focus-border i:after{transition-delay: 0.4s;}

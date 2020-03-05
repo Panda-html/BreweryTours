@@ -397,3 +397,9 @@ if (window.matchMedia("(min-width: 992px)").matches) {
 //   $(document).ready(function() {
 // 	$('#pagepiling').pagepiling();
 // });
+
+document.body.addEventListener('keyup', function(e) {
+    if (e.which === 9) /* tab */ {
+      document.body.classList.remove('no-focus-outline');
+    }
+  });

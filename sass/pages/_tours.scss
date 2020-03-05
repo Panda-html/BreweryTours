@@ -55,22 +55,6 @@
       padding-bottom: 100px;
     }
     & input[type=submit] {
-      padding: 11px 16px;
-      margin-left: 4px;
-      width: 100%;
-      background: $greenColor;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-      border: none;
-      font-weight: 800;
-      font-size: 16px;
-      line-height: 22px;
-      color: $whiteColor;
-      @include transition(.3);
-      &:hover {
-        background: $greenHoverColor;
-      }
       @media (max-width: $breakpoint-xl) {
         width: 178px;
         margin-right: auto;

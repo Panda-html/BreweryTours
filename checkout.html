@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="format-detection" content="telephone=no" />
 
-  <title>Sitemap</title>
+  <title>Checkout</title>
   <link rel="shortcut icon" type="image/ico" href="./img/favicon.ico" />
   <meta name="description" content="" />
   <link rel="stylesheet" href="css/magnific-popup.css">
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
+<body class="no-focus-outline">
 
   <div class="floating-menu">
     <div class="wrapper wrapper-chat">
@@ -147,116 +147,146 @@
     </div>
   </header>
   <div class="body-padding"></div>
-  <section class="sitemap">
+
+  <section class="checkout">
     <div class="container">
       <div class="row">
-        <div class="page__heading heading-1 --semibold">
-          Sitemap
-        </div>
+        <div class="page__heading heading-1 --semibold">Checkout</div>
       </div>
-      <div class="row">
-        <div class="sitemap-content">
-          <div class="sitemap__item">
-            <h3 class="sitemap__item--title">
-              Public Tours
-            </h3>
-            <div class="sitemap__item--description">
-              Find a tour which will suit your needs based on state
-            </div>
-            <ul class="sitemap__item--list d-flex">
-              <li class="sitemap__item--link">
-                <a href="#">Victoria</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">New South Wales</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">South Australia</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Quensland</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Western Australia</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Tasmania</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Victoria</a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="sitemap__item">
-            <h3 class="sitemap__item--title">
-              Main Info
-            </h3>
-            <div class="sitemap__item--description">
-              Find a tour which will suit your needs based on state
-            </div>
-            <ul class="sitemap__item--list d-flex">
-              <li class="sitemap__item--link">
-                <a href="#">FAQ</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">About Us</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Venue Partners</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Agents</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Terms & Conditions</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="#">Privacy Policy</a>
-              </li>
-            </ul>
-          </div>
-          <div class="sitemap__item">
-            <h3 class="sitemap__item--title">
-              Links to pages (just for a test, will be removed later)
-            </h3>
-            <div class="sitemap__item--description">
-              Links to pages (just for a test, will be removed later)
-            </div>
-            <ul class="sitemap__item--list d-flex">
-              <li class="sitemap__item--link">
-                <a href="home.html">Home page</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="tours-public.html">Public Tours</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="tours-private.html">Private Tours</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="tours-detailed.html">Detailed page of tour</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="product.html">Gift cards & merchandise</a>
-              </li>
-              <li class="sitemap__item--link">
-                <a href="cart.html">Cart</a>
-              </li>
-              <!-- <li class="sitemap__item--link">
-                <a href="cart.html">Empty Cart</a>
-              </li> -->
-              <li class="sitemap__item--link">
-                <a href="checkout.html">Checkout</a>
-              </li>
-              <!-- <li class="sitemap__item--link">
-                <a href="product-single.html">Product page</a>
-              </li> -->
-            </ul>
+      <div class="row m-row d-flex align-justify">
+        <div class="column --static col-lg-3 col-xs-12">
+          <div class="checkout-form">
+            <form action="">
+              <div class="form-control">
+                <input type="text" name="checkout-name" class="form-input" placeholder="First Name">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control">
+                <input type="text" name="checkout-name" class="form-input" placeholder="Second Name">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control">
+                <input type="tel" name="checkout-name" class="form-input" placeholder="Phone">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control">
+                <input type="text" name="checkout-name" class="form-input" placeholder="Country">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control">
+                <input type="text" name="checkout-name" class="form-input" placeholder="City">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control">
+                <input type="text" name="checkout-name" class="form-input" placeholder="Zip code">
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+              <div class="form-control checkout-submit">
+                <input type="submit" class="btn btn-book" value="Make order">
+              </div>
+            </form>
           </div>
         </div>
+        <div class="column col-lg-8 col-xs-12">
+          <div class="checkout-items">
+            <div class="cart__item">
+              <div class="cart__item--main d-flex">
+                <div class="cart__item--image">
+                  <img src="./img/product-1.png" alt="">
+                </div>
+                <div class="cart__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item--price">
+                $12
+              </div>
+            </div>
+            <div class="cart__item">
+              <div class="cart__item--main d-flex">
+                <div class="cart__item--image">
+                  <img src="./img/product-1.png" alt="">
+                </div>
+                <div class="cart__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item--price">
+                $12
+              </div>
+            </div>
+            <div class="cart__item">
+              <div class="cart__item--main d-flex">
+                <div class="cart__item--image">
+                  <img src="./img/product-1.png" alt="">
+                </div>
+                <div class="cart__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cart__item--price">
+                $12
+              </div>
+            </div>
+          </div>
+          <div class="cart-total">
+            Summary:<span>$36</span>
+          </div>
+        </div>
+        <!-- <div class="column col-xs-12">
+          <div class="form-control checkout-submit">
+            <input type="submit" class="btn btn-book" value="Make order">
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="row d-flex align-center">
@@ -331,7 +361,6 @@
   <script src="js/libs/jquery-3.4.1.js"></script>
   <script src="js/libs/jquery.magnific-popup.min.js"></script>
   <script src="js/libs/fullpage.js"></script>
-  <script src="js/libs/tooltipster.min.js"></script>
   <script src="js/libs/flickity.pkgd.min.js"></script>
   <script src="js/sliders.js"></script>
   <script src="js/brewerytours.js"></script>

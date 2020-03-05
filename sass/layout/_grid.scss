@@ -78,6 +78,9 @@
 .column {
   padding: 0 15px;
   position: relative;
+  &.--static {
+    position: static;
+  }
   @media (max-width: $breakpoint-sm) {
     padding: 0;
   }
