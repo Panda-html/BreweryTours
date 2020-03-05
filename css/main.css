@@ -1443,7 +1443,7 @@ table {
 
 .form-checkbox label, .form-radio label {
   font-size: 18px;
-  line-height: 27px;
+  line-height: 26px;
   cursor: pointer;
   display: flex;
   align-items: center;
