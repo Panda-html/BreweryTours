@@ -189,6 +189,14 @@ let front = {
           }
       });
 
+        $(".awards__main").on({
+            mouseenter: function () {
+                $('.awards__item').addClass('hovered');
+            },
+            mouseleave: function () {
+                $('.awards__item').removeClass('hovered');
+            }
+        });
 
       $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
           e.preventDefault();
