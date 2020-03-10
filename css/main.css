@@ -7226,6 +7226,44 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   padding: 11px 36px;
 }
 
+.empty-cart {
+  height: 300px;
+}
+
+@media (max-width: 991px) {
+  .empty-cart {
+    height: 200px;
+  }
+}
+
+.empty-cart img {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 991px) {
+  .empty-cart img {
+    width: 60px;
+  }
+}
+
+.empty-cart p {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #A4A4A4;
+}
+
+@media (max-width: 991px) {
+  .empty-cart p {
+    font-size: 20px;
+  }
+}
+
+.empty-cart a {
+  padding: 14px 36px;
+}
+
 .checkout {
   position: relative;
   padding-bottom: 60px;

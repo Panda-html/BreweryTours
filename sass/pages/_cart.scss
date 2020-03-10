@@ -149,6 +149,34 @@
   }
 }
 
+// Empty cart
+
+.empty-cart {
+  height: 300px;
+  @media (max-width: $breakpoint-lg) {
+    height: 200px;
+  }
+  & img {
+    margin-bottom: 8px;
+    @media (max-width: $breakpoint-lg) {
+      width: 60px;
+    }
+  }
+  & p {
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: #A4A4A4;
+    @media (max-width: $breakpoint-lg) {
+      font-size: 20px;
+    }
+  }
+  & a {
+    padding: 14px 36px;
+  }
+}
+
 // Checkout
 .checkout {
   position: relative;
