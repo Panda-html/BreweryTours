@@ -57,8 +57,10 @@
       width: 260px;
       height: 260px;
       margin: 0 auto 23px auto;
+      display: block;
     }
     &--name {
+      display: block;
       margin-bottom: 8px;
     }
     &--info {
@@ -103,4 +105,8 @@
 
 .breadcrumb--product {
   margin: 35px 0;
+  position: static;
+  @media (max-width: $breakpoint-md) {
+    margin: 24px 0;
+  }
 }

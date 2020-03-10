@@ -22,7 +22,7 @@
         <i class="icon-icon-chat"></i>
       </div>
     </div>
-    <div class="wrapper wrapper-more tooltip" data-tooltip-content="#tooltip_content">
+    <div class="wrapper wrapper-more">
       <!-- <span class="tooltip">More</span> -->
       <div class="btn-book --modified fab">
         <i class="icon-question-1"></i>
@@ -168,7 +168,7 @@
   <section class="single-product">
     <div class="container">
       <div class="row m-row align-middle">
-        <div class="column col-md-7">
+        <div class="column col-md-7 col-xs-12">
           <div class="product-carousel d-flex">
             <div class="swiper-container gallery-thumbs">
               <div class="swiper-wrapper">
@@ -193,8 +193,9 @@
               </div>
             </div>
             <div class="swiper-container gallery-top">
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next product-next"></div>
+              <div class="swiper-button-prev product-prev"></div>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="swiper-zoom-container">
@@ -228,10 +229,11 @@
                 </div>
               </div>
             </div>
+            <span class="product-tip">(double tap to increase image)</span>
           </div>
 
         </div>
-        <div class="column col-md-5">
+        <div class="column col-md-5 col-xs-12">
           <div class="product-info">
             <div class="product__title">
               T-Shirt Aussie Brewery Tours
@@ -301,20 +303,229 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <section class="product-recommendation">
     <div class="container">
-      <div class="row d-flex align-center">
-        <div class="product-recommendation__heading heading-2 --bold">
-          You may like this
+      <div class="swiper-container product-recommendations">
+        <div class="row d-flex align-center">
+          <div class="product-recommendations__heading heading-2 --bold">
+            <div class="swiper-button-prev recommendations-prev"></div>
+            You may like this
+            <div class="swiper-button-next recommendations-next"></div>
+          </div>
+        </div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product__item">
+              <div class="product__item--top">
+                <a class="product__item--image default-icon" href="#">
+                  <img src="./img/product-2.png" alt="T-Shirt">
+                </a>
+                <a href="#" class="product__item--name heading-4 --semibold">
+                  T-Shirt
+                </a>
+                <div class="product__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item--bottom">
+                <div class="product__item--price heading-2 --semibold">
+                  $12
+                </div>
+                <div class="product__item--btn">
+                  <a href="#" class="btn btn-book">GIMME!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product__item">
+              <div class="product__item--top">
+                <a class="product__item--image default-icon" href="#">
+                  <img src="./img/product-2.png" alt="T-Shirt">
+                </a>
+                <a href="#" class="product__item--name heading-4 --semibold">
+                  T-Shirt
+                </a>
+                <div class="product__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item--bottom">
+                <div class="product__item--price heading-2 --semibold">
+                  $12
+                </div>
+                <div class="product__item--btn">
+                  <a href="#" class="btn btn-book">GIMME!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product__item">
+              <div class="product__item--top">
+                <a class="product__item--image default-icon" href="#">
+                  <img src="./img/product-2.png" alt="T-Shirt">
+                </a>
+                <a href="#" class="product__item--name heading-4 --semibold">
+                  T-Shirt
+                </a>
+                <div class="product__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item--bottom">
+                <div class="product__item--price heading-2 --semibold">
+                  $12
+                </div>
+                <div class="product__item--btn">
+                  <a href="#" class="btn btn-book">GIMME!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product__item">
+              <div class="product__item--top">
+                <a class="product__item--image default-icon" href="#">
+                  <img src="./img/product-2.png" alt="T-Shirt">
+                </a>
+                <a href="#" class="product__item--name heading-4 --semibold">
+                  T-Shirt
+                </a>
+                <div class="product__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item--bottom">
+                <div class="product__item--price heading-2 --semibold">
+                  $12
+                </div>
+                <div class="product__item--btn">
+                  <a href="#" class="btn btn-book">GIMME!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product__item">
+              <div class="product__item--top">
+                <a class="product__item--image default-icon" href="#">
+                  <img src="./img/product-2.png" alt="T-Shirt">
+                </a>
+                <a href="#" class="product__item--name heading-4 --semibold">
+                  T-Shirt
+                </a>
+                <div class="product__item--info">
+                  <div class="info-item">
+                    <span>Type:</span>
+                    <p>Stubby Holder</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Brand:</span>
+                    <p>Aussie Brewery Tour</p>
+                  </div>
+                  <div class="info-item">
+                    <span>Made:</span>
+                    <p>Australia</p>
+                  </div>
+                </div>
+              </div>
+              <div class="product__item--bottom">
+                <div class="product__item--price heading-2 --semibold">
+                  $12
+                </div>
+                <div class="product__item--btn">
+                  <a href="#" class="btn btn-book">GIMME!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </section>
 
 
+  <section class="seo">
+    <div class="container">
+      <div class="row align-center">
+        <div class="col-md-10 col-xs-12 seo-component">
+          <h1>SEO Heading (for this page) — H1</h1>
+          <div class="entry-content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum quod est amet corporis voluptate nihil
+              ut quis ipsam, facilis eveniet magnam quos culpa necessitatibus beatae consectetur modi velit sint
+              voluptas maiores dicta voluptatibus nulla delectus. Eligendi, veniam. Qui libero omnis rerum similique,
+              quaerat molestias non, odit explicabo numquam excepturi minus consequuntur, veritatis alias dolorum quo
+              iure tempora inventore asperiores. Voluptate ratione sit doloribus reprehenderit, expedita at. Aliquam,
+              natus soluta? Eveniet repellendus saepe reprehenderit, sunt consequatur nostrum maxime fugit unde corrupti
+              impedit. Tempora nostrum reprehenderit perspiciatis temporibus itaque nisi asperiores pariatur vitae
+              corrupti odit laborum voluptates, dignissimos, adipisci possimus dolore corporis labore incidunt.
+              Obcaecati omnis iusto, aspernatur eveniet dolor, blanditiis a sunt commodi minima sapiente sit, quo
+              ratione odit est ipsum? Reprehenderit quidem eius quos aliquam pariatur voluptatibus maxime iusto
+              expedita! Aliquid est suscipit ex unde dolores! Accusantium ipsum maxime odit illum corrupti, tenetur
+              dicta est beatae iure facilis nostrum asperiores doloribus similique esse facere culpa quae modi odio
+              dolores animi hic, harum ex exercitationem temporibus. Obcaecati dicta similique sed dolore placeat
+              repellat repudiandae vitae veritatis iste aliquam in, temporibus itaque. Blanditiis, cupiditate
+              praesentium. Vel aperiam est corrupti dolorem veritatis, adipisci temporibus possimus perferendis
+              consequuntur recusandae a ipsa saepe magnam incidunt.</p>
+            <h2>Lorem, ipsum. h2</h2>
+            <h3>Lorem, ipsum. h3</h3>
+            <h4>Lorem, ipsum. h4</h4>
+            <h5>Lorem, ipsum. h5</h5>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <footer class="footer">
@@ -398,30 +609,31 @@
   <script src="js/brewerytours.js"></script>
 
   <script>
-    var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
-      slidesPerView: 5,
-      touchRatio: 0,
-      loop: true,
-      direction: 'vertical',
-      loopedSlides: 5, //looped slides should be the same
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-    });
-    var galleryTop = new Swiper('.gallery-top', {
-      spaceBetween: 10,
-      zoom: true,
-      // touchRatio: 0,
-      loop: true,
-      loopedSlides: 5, //looped slides should be the same
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
-    });
+    // var galleryThumbs = new Swiper('.gallery-thumbs', {
+    //   spaceBetween: 10,
+    //   slidesPerView: 5,
+    //   touchRatio: 0,
+    //   loop: true,
+    //   direction: 'vertical',
+    //   loopedSlides: 5, //looped slides should be the same
+    //   watchSlidesVisibility: true,
+    //   watchSlidesProgress: true,
+    // });
+    // var galleryTop = new Swiper('.gallery-top', {
+    //   spaceBetween: 10,
+    //   zoom: true,
+    //   // touchRatio: 0,
+    //   loop: true,
+    //   loopedSlides: 5, //looped slides should be the same
+    //   navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    //   },
+    //   thumbs: {
+    //     swiper: galleryThumbs,
+    //   },
+    // });
+
   </script>
 </body>
 
