@@ -4171,6 +4171,8 @@ button.swiper-pagination-bullet {
 
 .main-screen__awards .awards__item {
   margin: 0 20px 12px 0;
+  opacity: 0;
+  visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
