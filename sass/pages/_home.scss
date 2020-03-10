@@ -190,7 +190,9 @@ section.section {
 }
 
 
+
 .btn-wrap {
+  margin-top: 24px;
   @media (max-width: $breakpoint-md) {
     display: flex;
     justify-content: center;
@@ -532,7 +534,7 @@ section.section {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%)
+      transform: translate(-50%, -50%)!important;
     }
     & .text-bottom {
       position: absolute;

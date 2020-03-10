@@ -31,7 +31,13 @@ let front = {
             // normalScrollElements: '.footer',
             navigation: true,
             slidesNavigation: true,
-            slidesToSections: true
+            slidesToSections: true,
+            fadingEffect: true,
+            parallax: true,
+            parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+            afterLoad: function(){
+                $('.fp-table.active .aos-init').addClass('aos-animate');
+            },
         });
       } else {
         null
@@ -292,6 +298,10 @@ let modal = {
 jQuery(function () {
   front.init();
   modal.init();
+  AOS.init({
+      once: true,
+      delay: 0
+  });
   let sidebar = document.querySelector('#sidebar') !== null;
   if (sidebar) {
     var stickySidebar = new StickySidebar('#sidebar', {
