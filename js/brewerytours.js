@@ -7,6 +7,7 @@ let front = {
   submenu: $('.submenu'),
   filter: $('.filter'),
   closeFilter: $('.filter-close'),
+  awardsList: $('.awards-list'),
   slider_options_default: {
       wrapAround: true,
       pageDots: false,
@@ -72,6 +73,13 @@ let front = {
           this.submenu.find('p').remove()
       }
   },
+  toggleAwards: function() {
+    if (!this.awardsList.hasClass('show')) {
+        this.awardsList.addClass('show')
+    } else {
+        this.awardsList.toggleClass('show');
+    }
+    },
   toggleBtn: function() {
       if(!this.fixedButton.hasClass('active')) {
           this.fixedButton.addClass('active');
@@ -115,6 +123,7 @@ let front = {
       copyText.select();
       document.execCommand("copy");
   },
+
   openTab: function (element, tabName, parent) {
       let i, tab_content, tab_links;
 
@@ -197,6 +206,16 @@ let front = {
                 $('.awards__item').removeClass('hovered');
             }
         });
+   
+        $(document).on('click', '.toggle-awards', function(){
+            if (window.matchMedia("(max-width: 767px)").matches) {
+                self.toggleAwards();
+            } else {
+                null
+            }
+            
+        })
+    
 
       $(document).on('click', '.footer-navigation .menu-item-has-children > a', function (e) {
           e.preventDefault();

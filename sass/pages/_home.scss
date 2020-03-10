@@ -38,7 +38,10 @@ section.section {
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    // max-height: 90%;
+    @media (max-width: $breakpoint-md) {
+      position: static;
+      display: block;
+    }
     & .awards {
       &__main, &__item {
         width: 105px;
@@ -49,6 +52,29 @@ section.section {
         align-items: center;
         justify-content: center;
       }
+      &__close {
+        display: none;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        & i {
+          font-size: 24px;
+        }
+        @media (max-width: $breakpoint-md) {
+          display: block;
+        }
+      }
+      &__heading {
+        width: 100%;
+        display: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 38px;
+        @media (max-width: $breakpoint-md){
+          display: block;
+        }
+      }
       &-list {
         margin-bottom: 118px;
         display: flex;
@@ -57,6 +83,25 @@ section.section {
         width: 230px;
         height: 65vh;
         max-height: 65vh;
+        z-index: 99;
+        @media (max-width: $breakpoint-md) {
+          background: $whiteColor;
+          position: fixed;
+          left: -120%;
+          top: 80px;
+          height: calc(100% - 80px);
+          width: 100%;
+          overflow-y: auto;
+          max-height: unset;
+          margin: 0;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          @include transition(.3);
+          &.show {
+            left: 0;
+          }
+        }
       }
       &__main {
         width: 230px;
@@ -68,6 +113,9 @@ section.section {
           height: 100%;
           object-fit: contain;
           padding: 3px;
+        }
+        @media (max-width: $breakpoint-md) {
+          position: static;
         }
       }
       &__item {
@@ -82,29 +130,35 @@ section.section {
           object-fit: contain;
           padding: 3px;
         }
+        @media (max-width: $breakpoint-md) {
+          opacity: 1;
+          visibility: visible;
+          width: 40%;
+          margin: 0;
+        }
         &.hovered {
           opacity: 1;
           visibility: visible;
         }
-        &:nth-child(1) {
+        &:nth-child(3) {
           transition-delay: 0.05s;
         }
-        &:nth-child(2) {
+        &:nth-child(4) {
           transition-delay: 0.15s;
         }
-        &:nth-child(3) {
+        &:nth-child(5) {
           transition-delay: 0.25s;
         }
-        &:nth-child(4) {
+        &:nth-child(6) {
           transition-delay: 0.35s;
         }
-        &:nth-child(5) {
+        &:nth-child(7) {
           transition-delay: 0.45s
         }
-        &:nth-child(6) {
+        &:nth-child(8) {
           transition-delay: 0.55s;
         }
-        &:nth-child(7) {
+        &:nth-child(9) {
           transition-delay: 0.65s;
         }
       }
