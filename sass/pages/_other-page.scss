@@ -1,0 +1,14 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.thankyou {
+  &__image {
+    margin-bottom: 16px;
+  }
+  &__heading {
+    margin-bottom: 12px;
+  }
+  &__text {
+    margin-bottom: 16px;
+  }
+}
