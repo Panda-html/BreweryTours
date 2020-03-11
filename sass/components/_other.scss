@@ -70,10 +70,6 @@
   }
 }
 
-.fp-nav {
-
-}
-
 .first-screen--product {
   @media (max-width: $breakpoint-md) {
     height: 280px;
@@ -114,11 +110,22 @@
 
 .page-nav {
   display: flex;
-  margin-top: 30px;
+  margin: 30px 0 0 0;
+  @media (max-width: $breakpoint-lg) {
+    flex-wrap: wrap;
+    margin: 30px 0 24px 0;
+  }
   &__item {
     border: 2px solid $greenColor;
     border-radius: 5px;
     margin: 0 12px 12px 0;
+    @media (max-width: $breakpoint-lg) {
+      flex-grow: 1;
+      width: 48%;
+      &:nth-child(even) {
+        margin: 0 0 12px 0;
+      }
+    }
   }
   &__link {
     padding: 9px 24px;
@@ -126,7 +133,14 @@
     display: block;
     @include transition(.3);
     font-size: 16px;
-    line-height: 26px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    @media (max-width: $breakpoint-lg) {
+      justify-content: center;
+      text-align: center;
+    }
     &.active, &:hover {
       background: $greenColor;
       color: $whiteColor;
