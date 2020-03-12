@@ -1,0 +1,71 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.about {
+  &__image {
+    border-radius: 5px;
+    overflow: hidden;
+    @media (max-width: $breakpoint-md) {
+      border-radius: 0;
+    }
+  }
+  &__container {
+    &--mobile {
+      @media (max-width: $breakpoint-lg) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    &--fluid {
+      @media (max-width: $breakpoint-md) {
+        max-width: unset;
+        margin: 0;
+        padding: 0;
+        & .row {
+          & .column {
+            padding: 0;
+          }
+          & .column:nth-child(n + 2) {
+            display: none;
+
+          }
+        }
+      }
+    }
+    &--info {
+      margin-top: 36px;
+    }
+  }
+  &__map {
+    border-radius: 5px;
+    overflow: hidden;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 10px;
+      width: 100%;
+      & img {
+        width: 100%;
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+  &__info {
+    &--contacts {
+      margin-bottom: 30px;
+      & .contacts__item, & a {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+      }
+      & .contacts__item {
+        margin-bottom: 12px;
+      }
+      & i {
+        padding-right: 8px;
+      }
+      & .contacts__owner {
+        margin-top: 26px;
+      }
+    }
+  }
+}

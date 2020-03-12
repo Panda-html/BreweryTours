@@ -25,6 +25,11 @@
       margin-bottom: 24px;
     }
   }
+  & .page-nav {
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 30px;
+    }
+  }
 }
 
 .accordion-container {

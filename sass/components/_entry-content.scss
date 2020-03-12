@@ -4,42 +4,41 @@
 .entry-content {
   font-weight: normal;
   & p {
-    @include fontSize(14, 16);
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 400;
-    // line-height: 1.85;
-    // color: $defaultTextColor;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     @media (max-width: $breakpoint-lg) {
       margin-bottom: 16px;
     }
   }
 
   & h1 {
-    @include fontSize(34, 56);
+    @include fontSize(30, 40);
     line-height: 1.2;
     margin-bottom: 50px;
   }
 
   & h2 {
-    @include fontSize(28, 48);
+    @include fontSize(24, 28);
     line-height: 1.25;
     margin: 12px 0 16px 0;
   }
 
   & h3 {
-    @include fontSize(22, 36);
+    @include fontSize(20, 24);
     line-height: 1.22;
     margin: 12px 0 16px 0;
   }
 
   & h4 {
-    @include fontSize(18, 28);
+    @include fontSize(16, 20);
     line-height: 1.32;
     margin: 12px 0 16px 0;
   }
 
   & h5 {
-    @include fontSize(16, 24);
+    @include fontSize(14, 18);
     line-height: 1.64;
     margin: 12px 0 16px 0;
   }

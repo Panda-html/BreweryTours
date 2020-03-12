@@ -73,6 +73,20 @@
   @include fontSize(12, 16);
   line-height: 1.6;
 }
+.icon-icon-owner:before {
+  content: "\e925";
+  color: #95bb54;
+}
+.icon-internet:before {
+  content: "\e926";
+  color: #95bb54;
+}
+
+.icon-house:before {
+  content: "\e927";
+  color: #95bb54;
+}
+
 .icon-fri:before {
   content: "\e918";
 }

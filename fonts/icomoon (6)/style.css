@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?7dzi0s');
-  src:  url('fonts/icomoon.eot?7dzi0s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?7dzi0s') format('truetype'),
-    url('fonts/icomoon.woff?7dzi0s') format('woff'),
-    url('fonts/icomoon.svg?7dzi0s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?dvxfc4');
+  src:  url('fonts/icomoon.eot?dvxfc4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?dvxfc4') format('truetype'),
+    url('fonts/icomoon.woff?dvxfc4') format('woff'),
+    url('fonts/icomoon.svg?dvxfc4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -74,6 +74,18 @@
 .icon-question-1:before {
   content: "\e91e";
   color: #fff;
+}
+.icon-house:before {
+  content: "\e927";
+  color: #95bb54;
+}
+.icon-icon-owner:before {
+  content: "\e925";
+  color: #95bb54;
+}
+.icon-internet:before {
+  content: "\e926";
+  color: #95bb54;
 }
 .icon-icon-filter:before {
   content: "\e90f";
