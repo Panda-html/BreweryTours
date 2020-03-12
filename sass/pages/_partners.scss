@@ -24,6 +24,14 @@
       border-radius: 5px;
       display: block;
       margin-right: 24px;
+      &:before, &:after {
+        left: calc(-100% - 44px);
+      }
+      &:hover {
+        &:before, &:after {
+          left: calc(0% - 14px);
+        }
+      }
       @media (max-width: $breakpoint-lg) {
         margin: 0 0 16px 0;
       }
@@ -65,7 +73,6 @@
         }
       }
       & i, & img {
-        // @include transition(.1);
         z-index: 2;
       }
       &:hover {
@@ -74,7 +81,6 @@
         }
         & i, & img {
           filter: brightness(0) invert(1);
-          // color: $whiteColor;
         }
       }
     }
@@ -92,9 +98,6 @@
       position: static;
       padding: 12px;
     }
-  }
-  &-list {
-    // margin-top: 24px;
   }
   &__item {
     border: 1px solid #DADADA;  
@@ -161,6 +164,9 @@
       display: inline-block;
       padding: 4px 20px;
       border-radius: 4px;
+      &:before, &:after {
+        left: calc(-100% - 44px);
+      }
     }
   }
 }
