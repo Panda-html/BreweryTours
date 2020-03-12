@@ -90,6 +90,9 @@
         "../sass/abstracts/_variables.scss",
         "../sass/pages/_about.scss",
         "../sass/abstracts/_mixins.scss",
+        "../sass/abstracts/_variables.scss",
+        "../sass/pages/_partners.scss",
+        "../sass/abstracts/_mixins.scss",
         "../sass/abstracts/_variables.scss"
     ],
     "names": [],
