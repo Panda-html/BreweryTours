@@ -10,12 +10,6 @@
     }
   }
   &__container {
-    &--mobile {
-      @media (max-width: $breakpoint-lg) {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-    }
     &--fluid {
       @media (max-width: $breakpoint-md) {
         max-width: unset;

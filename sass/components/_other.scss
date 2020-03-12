@@ -85,6 +85,12 @@
   @media (max-width: $breakpoint-md) {
     margin: 24px 0;
   }
+  &--modified {
+    margin: 22px 0 24px 0;
+    @media (max-width: $breakpoint-md) {
+      margin: 24px 0;
+    }
+  }
 }
 
 .info-item {
@@ -149,5 +155,12 @@
       background: $greenColor;
       color: $whiteColor;
     }
+  }
+}
+
+.container__mobile {
+  @media (max-width: $breakpoint-lg) {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
