@@ -1,0 +1,53 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.become-partner {
+  margin: 34px 0 64px 0;
+  &__heading {
+    margin-bottom: 12px;
+  }
+  &__form {
+    & form {
+      width: 100%;
+      & .form-control {
+        position: relative;
+        border-radius: 0;
+      }
+      & .form-input {
+        border: 1px solid transparent;
+        background: #F7F7F7;
+        border-radius: 4px 4px 0px 0px;
+        transition: unset;
+        transition-delay: unset;
+        color: $blackColor;
+        &:focus {
+          outline: none;
+          &::placeholder {
+            color: #777777;
+          }
+          ~ .green-line:before {
+            width: 100%;
+          }
+        }
+      }
+      & input[type=submit] {
+        width: auto;
+        padding: 11px 26px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.green-line {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: $greenColor;
+    height: 2px;
+    width: 0;
+    @include transition(.4);
+  }
+}

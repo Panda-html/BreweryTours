@@ -1942,6 +1942,64 @@ input[type=submit]:hover {
   width: 100%;
 }
 
+.become-partner {
+  margin: 34px 0 64px 0;
+}
+
+.become-partner__heading {
+  margin-bottom: 12px;
+}
+
+.become-partner__form form {
+  width: 100%;
+}
+
+.become-partner__form form .form-control {
+  position: relative;
+  border-radius: 0;
+}
+
+.become-partner__form form .form-input {
+  border: 1px solid transparent;
+  background: #F7F7F7;
+  border-radius: 4px 4px 0px 0px;
+  transition: unset;
+  transition-delay: unset;
+  color: #000000;
+}
+
+.become-partner__form form .form-input:focus {
+  outline: none;
+}
+
+.become-partner__form form .form-input:focus::placeholder {
+  color: #777777;
+}
+
+.become-partner__form form .form-input:focus ~ .green-line:before {
+  width: 100%;
+}
+
+.become-partner__form form input[type=submit] {
+  width: auto;
+  padding: 11px 26px;
+  font-weight: 400;
+}
+
+.green-line:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #95BB54;
+  height: 2px;
+  width: 0;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
 .container {
   max-width: 1320px;
   margin: auto;
@@ -1987,6 +2045,10 @@ input[type=submit]:hover {
   .m-row {
     margin: 0 !important;
   }
+}
+
+.m-auto {
+  margin: 0 auto;
 }
 
 .w-100 {
