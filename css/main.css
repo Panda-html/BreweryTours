@@ -7619,6 +7619,60 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   margin-bottom: 16px;
 }
 
+.error-page {
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+.error-page video {
+  width: 100%;
+}
+
+@media (max-width: 1150px) {
+  .error-page video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.error-page .container {
+  padding-top: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+.error-page__title {
+  font-weight: 800;
+  font-size: 200px;
+  line-height: 150px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 575px) {
+  .error-page__title {
+    font-size: 140px;
+  }
+}
+
+.error-page__subtitle {
+  margin-bottom: 16px;
+  font-size: 40px;
+}
+
+.error-page p {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.error-page a {
+  border-radius: 5px;
+}
+
 .first-screen--faq {
   margin-bottom: 0;
 }
