@@ -81,12 +81,13 @@
   content: "\e926";
   color: #95bb54;
 }
-
-.icon-house:before {
-  content: "\e927";
-  color: #95bb54;
+.icon-house {
+  padding-right: 12px;
+  &:before {
+    content: "\e927";
+    color: $greenColor;
+  }
 }
-
 .icon-fri:before {
   content: "\e918";
 }
