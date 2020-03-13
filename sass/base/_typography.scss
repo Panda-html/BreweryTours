@@ -167,6 +167,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
+  @include transition(.3);
 }
 .icon-icon-chat:before {
   content: "\e904";
@@ -187,9 +188,6 @@
   content: "\e90a";
   color: #d02c1f;
 }
-// .icon-icon-instagram:before {
-//   content: "\e90f";
-// }
 .icon-icon-new-south-wales:before {
   content: "\e910";
   color: #cedd79;
@@ -214,6 +212,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
+  @include transition(.3);
 }
 
 .icon-icon-phone-navbar:before {
@@ -231,6 +230,7 @@
   align-items: center;
   justify-content: center;
   font-size: 24px;
+  @include transition(.3);
 }
 .icon-icon-quensland:before {
   content: "\e913";
