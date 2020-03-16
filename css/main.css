@@ -5897,13 +5897,36 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 
 .app-section-3 .home-images .image-item {
   position: relative;
-  width: 13vw;
   cursor: pointer;
   filter: saturate(0%);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+}
+
+@media (max-width: 2560px) {
+  .app-section-3 .home-images .image-item {
+    width: 9vw;
+  }
+}
+
+@media (max-width: 1920px) {
+  .app-section-3 .home-images .image-item {
+    width: 10vw;
+  }
+}
+
+@media (max-width: 1600px) {
+  .app-section-3 .home-images .image-item {
+    width: 11vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .app-section-3 .home-images .image-item {
+    width: 13vw;
+  }
 }
 
 @media (max-width: 1200px) {

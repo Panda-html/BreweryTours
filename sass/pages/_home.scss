@@ -363,10 +363,22 @@ section.section {
     }
     & .image-item {
       position: relative;
-      width: 13vw;
+      // width: 13vw;
       cursor: pointer;
       filter: saturate(0%);
       @include transition(.3);
+      @media (max-width: 2560px) {
+        width: 9vw;
+      }
+      @media (max-width: 1920px) {
+        width: 10vw;
+      }
+      @media (max-width: 1600px) {
+        width: 11vw;
+      }
+      @media (max-width: 1400px) {
+        width: 13vw;
+      }
       @media (max-width: $breakpoint-xl) {
         width: 16vw;
       }
